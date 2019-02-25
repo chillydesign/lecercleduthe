@@ -83,7 +83,8 @@ add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_show_product_
 add_action( 'woocommerce_after_shop_loop_item_title', 'shop_isle_outofstock_notify_on_archives', 10 );
 
 /* add products slider */
-add_action( 'woocommerce_after_single_product', 'shop_isle_products_slider_on_single_page', 10, 0 );
+// NOTE CHARLES DONT ADD PRODUCT SLIDE ON SINGLE PAGE
+// add_action( 'woocommerce_after_single_product', 'shop_isle_products_slider_on_single_page', 10, 0 );
 
 /* notices */
 remove_action( 'woocommerce_before_single_product', 'wc_print_notices', 10 );
@@ -143,3 +144,12 @@ if ( function_exists( 'wccm_add_single_product_compare_buttton' ) ) {
 add_filter( 'woocommerce_widget_cart_is_hidden', 'shop_isle_always_show_live_cart', 40, 0 );
 
 add_action( 'woocommerce_before_single_product_summary', 'shop_isle_outofstock_notify_on_archives', 20 );
+
+
+// NOTE CHARLES remove tabs from below product image
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+// NOTE CHARLES add content to above price
+add_action( 'woocommerce_single_product_summary', 'add_content_to_above_price', 15 );
+function add_content_to_above_price(){
+    echo  '<div class="product_content">'; the_content();  echo '</div>';
+}
