@@ -5,14 +5,8 @@
  * @package WordPress
  * @subpackage Shop Isle
  */
-$vendor_file = trailingslashit( get_template_directory() ) . 'vendor/autoload.php';
-if ( is_readable( $vendor_file ) ) {
-	require_once $vendor_file;
-}
 
-if ( ! defined( 'WPFORMS_SHAREASALE_ID' ) ) {
-	define( 'WPFORMS_SHAREASALE_ID', '848264' );
-}
+
 
 add_filter( 'themeisle_sdk_products', 'shopisle_load_sdk' );
 /**
@@ -73,5 +67,3 @@ require get_template_directory() . '/inc/init.php';
 
  }
  add_action( 'after_setup_theme', 'remove_json_api' );
-
- 
