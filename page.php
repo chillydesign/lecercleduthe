@@ -90,7 +90,7 @@ get_header(); ?>
 			<?php if ( ( function_exists( 'is_cart' ) && is_cart() ) || ( function_exists( 'is_checkout' ) && is_checkout() ) || ( function_exists( 'is_wc_endpoint_url' ) && is_wc_endpoint_url( 'lost-password' ) ) || ( function_exists( 'is_account_page' ) && is_account_page() ) ) : ?>
 			<div class="col-sm-12">
 				<?php else : ?>
-				<div class="col-sm-12 shop-isle-page-content">
+				<div class="col-sm-6 col-sm-push-3 shop-isle-page-content">
 					<?php endif; ?>
 					<?php
 					/**
