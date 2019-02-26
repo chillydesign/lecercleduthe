@@ -87,4 +87,5 @@ function shopisle_theme_info_customize_register( $wp_customize ) {
 	);
 
 }
-add_action( 'customize_register', 'shopisle_theme_info_customize_register' );
+    // NOTE CHARLES REMOVE REFERENCE TO VIEW PRO VERSION
+//  add_action( 'customize_register', 'shopisle_theme_info_customize_register' );

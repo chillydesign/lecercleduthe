@@ -80,40 +80,44 @@ final class Shopisle_Customizer_Upsell {
 		$manager->register_section_type( 'Shopisle_Customizer_Upsell_Main' );
 		$manager->register_section_type( 'Shopisle_Customizer_Upsell_Text' );
 
+
+        // NOTE CHARLES REMOVE REFERENCE TO SHOP ISLE DOCUMENTATION
 		// Register sections.
 		// Main Upsell In Customizer Root.
-		$manager->add_section(
-			new Shopisle_Customizer_Upsell_Main(
-				$manager,
-				'shopisle-upsell',
-				array(
-					'upsell_title' => __( 'Shop Isle', 'shop-isle' ),
-					'label_url'    => 'http://docs.themeisle.com/article/421-shop-isle-documentation-wordpress-org',
-					'label_text'   => __( 'Documentation', 'shop-isle' ),
-				)
-			)
-		);
+		// $manager->add_section(
+		// 	new Shopisle_Customizer_Upsell_Main(
+		// 		$manager,
+		// 		'shopisle-upsell',
+		// 		array(
+		// 			'upsell_title' => __( 'Shop Isle', 'shop-isle' ),
+		// 			'label_url'    => 'http://docs.themeisle.com/article/421-shop-isle-documentation-wordpress-org',
+		// 			'label_text'   => __( 'Documentation', 'shop-isle' ),
+		// 		)
+		// 	)
+		// );
 
-		// Frontpage Sections Upsell.
-		$manager->add_section(
-			new Shopisle_Customizer_Upsell_Section(
-				$manager,
-				'shopisle-upsell-section',
-				array(
-					'panel'       => 'shop_isle_front_page_sections',
-					'priority'    => 500,
-					'options'     => array(
-						esc_html__( 'Categories Section', 'shop-isle' ),
-						esc_html__( 'Map Section', 'shop-isle' ),
-						esc_html__( 'Ribbon Section', 'shop-isle' ),
-						esc_html__( 'Services Section', 'shop-isle' ),
-						esc_html__( 'Add New Sections', 'shop-isle' ),
-					),
-					'button_url'  => esc_url( 'https://themeisle.com/themes/shop-isle-pro/upgrade/' ),
-					'button_text' => esc_html__( 'View PRO version', 'shop-isle' ),
-				)
-			)
-		);
+
+        // NOTE CHARLES REMOVE REFERENCE TO VIEW PRO VERSION
+		// // Frontpage Sections Upsell.
+		// $manager->add_section(
+		// 	new Shopisle_Customizer_Upsell_Section(
+		// 		$manager,
+		// 		'shopisle-upsell-section',
+		// 		array(
+		// 			'panel'       => 'shop_isle_front_page_sections',
+		// 			'priority'    => 500,
+		// 			'options'     => array(
+		// 				esc_html__( 'Categories Section', 'shop-isle' ),
+		// 				esc_html__( 'Map Section', 'shop-isle' ),
+		// 				esc_html__( 'Ribbon Section', 'shop-isle' ),
+		// 				esc_html__( 'Services Section', 'shop-isle' ),
+		// 				esc_html__( 'Add New Sections', 'shop-isle' ),
+		// 			),
+		// 			'button_url'  => esc_url( 'https://themeisle.com/themes/shop-isle-pro/upgrade/' ),
+		// 			'button_text' => esc_html__( 'View PRO version', 'shop-isle' ),
+		// 		)
+		// 	)
+		// );
 
 		// Frontpage Instructions.
 		if ( 'page' === get_option( 'show_on_front' ) ) {
