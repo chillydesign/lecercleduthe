@@ -100,12 +100,14 @@ if ( ! function_exists( 'shop_isle_primary_navigation' ) ) {
 						</div>
 					</div>
 
+
+                    <?php $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) ); ?>
 					<div class="header-menu-wrap">
 						<div class="collapse navbar-collapse" id="custom-collapse">
                             <div class="nav navbar-nav navbar-right">
                                 <ul>
                                     <li class="menu-item-has-children">
-                                        <a href="#">Nos thés en ligne</a>
+                                        <a href="<?php echo $shop_page_url; ?>">Nos thés en ligne</a>
                                         <ul class="sub-menu">
                                             <?php $cat_args = array(
                                                 'taxonomy' => 'product_cat' ,
@@ -117,7 +119,7 @@ if ( ! function_exists( 'shop_isle_primary_navigation' ) ) {
                                     </li>
                                 <?php
 
-                                # NOTE CHARLES ADD SHOP CATEGORIES TO HEADER NAV
+                                // NOTE CHARLES ADD SHOP CATEGORIES TO HEADER NAV
 
                                 wp_nav_menu(
                                     array(

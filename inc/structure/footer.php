@@ -95,9 +95,10 @@ if ( ! function_exists( 'shop_isle_footer_copyright_and_socials' ) ) {
 					echo '</div>';
 
 					/* Socials icons */
-					echo '<div class="col-sm-6">';
-					echo shop_isle_footer_display_socials();
-					echo '</div>';
+                    // NOTE CHARLES REMOVE SOCIAL ICONS FROM FOOTER
+					// echo '<div class="col-sm-6">';
+					// echo shop_isle_footer_display_socials();
+					// echo '</div>';
 					?>
 				</div><!-- .row -->
 

@@ -169,7 +169,7 @@ class Shop_Isle_Repeater_Controler extends WP_Customize_Control {
 	 */
 	public function enqueue() {
 
-		wp_enqueue_style( 'eleganticons-style', get_template_directory_uri() . '/inc/customizer/customizer-repeater/css/eleganticons.css', false, SI_VERSION );
+		//  wp_enqueue_style( 'eleganticons-style', get_template_directory_uri() . '/inc/customizer/customizer-repeater/css/eleganticons.css', false, SI_VERSION );
 
 		wp_enqueue_style( 'customizer-repeater-admin-stylesheet', get_template_directory_uri() . '/inc/customizer/customizer-repeater/css/admin-style.css', false, SI_VERSION );
 
@@ -384,7 +384,7 @@ class Shop_Isle_Repeater_Controler extends WP_Customize_Control {
 						}
 ?>
 ">
-						<button type="button" class="social-repeater-general-control-remove-field button" 
+						<button type="button" class="social-repeater-general-control-remove-field button"
 						<?php
 						if ( $it == 0 ) {
 							echo 'style="display:none;"';
@@ -561,7 +561,7 @@ class Shop_Isle_Repeater_Controler extends WP_Customize_Control {
 	 */
 	private function image_control( $value = '', $show = '' ) {
 	?>
-		<div class="customizer-repeater-image-control" 
+		<div class="customizer-repeater-image-control"
 		<?php
 		if ( $show === 'shop_isle_icon' || $show === 'shop_isle_none' ) {
 			echo 'style="display:none;"'; }

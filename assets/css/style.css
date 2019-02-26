@@ -1549,11 +1549,10 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	color: #666;
+	color: #333;
 	background: #fff;
-	font: 400 13px/1.8 "Source Sans Pro", verdana, arial,  sans-serif;
+	font: 400 16px/1.9 "Source Sans Pro" ,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	-webkit-font-smoothing: antialiased;
-
 	-webkit-box-direction: normal;
 	-webkit-box-orient: vertical;
 	-webkit-flex-direction: column;
@@ -1705,7 +1704,7 @@ input[type="radio"] {
 	padding: 6px 12px;
 	border: 1px solid #eaeaea;
 	border-radius: 2px;
-	color: #666;
+	color: #333;
 
 	font-size: 12px;
 	letter-spacing: 2px;
@@ -2247,7 +2246,7 @@ p,
 ol,
 ul,
 blockquote {
-	margin: 0 0 20px;
+	margin: 0 0 25px;
 }
 
 blockquote {
@@ -2386,7 +2385,7 @@ body.admin-bar .navbar {
 	top: 50%;
 	right: 0;
 	margin-top: -6px;
-	font: normal normal normal 14px/1 "ElegantIcons";
+	font: normal normal normal 14px/1 "";
 	font-size: 9px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -2718,7 +2717,7 @@ Sections
 .main {
 	position: relative;
 	z-index: 1;
-	color: #666;
+	color: #333;
 
 	-webkit-box-flex: 1 0 auto;
 	-webkit-flex: 1 0 auto;
@@ -3109,7 +3108,7 @@ footer.footer {
 
 .shop_isle_footer_sidebar .widget input[type=search],
 .shop_isle_footer_sidebar .widget_search {
-	color: #666;
+	color: #333;
 }
 
 .shop_isle_footer_sidebar {
@@ -3579,7 +3578,7 @@ Gallery
 ------------------------------------------------------------------- */
 
 .gallery {
-	margin: 0 -1.1666667% 1.75em;
+	margin: 0 -1.1333667% 1.75em;
 }
 
 .gallery-item {
@@ -3796,7 +3795,7 @@ Post
 
 .more-link:after {
 	padding-left: 5px;
-	color: #666;
+	color: #333;
 	content: "\00BB";
 }
 
@@ -4091,7 +4090,7 @@ Widgets
 
 .widget ul li:before {
 	padding-right: 5px;
-	color: #666;
+	color: #333;
 	content: "\00BB";
 }
 
@@ -4236,7 +4235,7 @@ Widgets
 
 .widget .icon-list li a:before {
 	padding-right: 5px;
-	color: #666;
+	color: #333;
 	content: "\00BB";
 }
 
