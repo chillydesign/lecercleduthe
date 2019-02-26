@@ -104,7 +104,20 @@ if ( ! function_exists( 'shop_isle_primary_navigation' ) ) {
 						<div class="collapse navbar-collapse" id="custom-collapse">
                             <div class="nav navbar-nav navbar-right">
                                 <ul>
+                                    <li class="menu-item-has-children">
+                                        <a href="#">Nos thés en ligne</a>
+                                        <ul class="sub-menu">
+                                            <?php $cat_args = array(
+                                                'taxonomy' => 'product_cat' ,
+                                                 'title_li' => '',
+                                                 'hide_title_if_empty' => false
+                                             ); ?>
+                                            <?php wp_list_categories($cat_args  ); ?>
+                                        </ul>
+                                    </li>
                                 <?php
+
+                                # NOTE CHARLES ADD SHOP CATEGORIES TO HEADER NAV
 
                                 wp_nav_menu(
                                     array(
