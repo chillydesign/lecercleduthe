@@ -90,7 +90,7 @@ get_header(); ?>
 			<?php if ( ( function_exists( 'is_cart' ) && is_cart() ) || ( function_exists( 'is_checkout' ) && is_checkout() ) || ( function_exists( 'is_wc_endpoint_url' ) && is_wc_endpoint_url( 'lost-password' ) ) || ( function_exists( 'is_account_page' ) && is_account_page() ) ) : ?>
 			<div class="col-sm-12">
 				<?php else : ?>
-				<div class="col-sm-8 shop-isle-page-content">
+				<div class="col-sm-12 shop-isle-page-content">
 					<?php endif; ?>
 					<?php
 					/**
@@ -129,11 +129,10 @@ get_header(); ?>
 				<!-- Sidebar column start -->
 				<?php if ( ( function_exists( 'is_cart' ) && is_cart() ) || ( function_exists( 'is_checkout' ) && is_checkout() ) || ( function_exists( 'is_wc_endpoint_url' ) && is_wc_endpoint_url( 'lost-password' ) ) || ( function_exists( 'is_account_page' ) && is_account_page() ) ) : ?>
 				<?php else : ?>
-					<div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1 sidebar">
-
-						<?php do_action( 'shop_isle_sidebar' ); ?>
-
-					</div>
+                    <!-- NOTE CHARLES NO SIDEBARS ANYWHERE -->
+					<!-- <div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1 sidebar">
+						<?php // do_action( 'shop_isle_sidebar' ); ?>
+					</div> -->
 				<?php endif; ?>
 				<!-- Sidebar column end -->
 

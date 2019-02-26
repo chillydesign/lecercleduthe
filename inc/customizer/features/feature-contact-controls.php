@@ -97,7 +97,7 @@ function shop_isle_contact_page_customize_register( $wp_customize ) {
 	);
 }
 
-add_action( 'customize_register', 'shop_isle_contact_page_customize_register' );
+// add_action( 'customize_register', 'shop_isle_contact_page_customize_register' );
 
 /**
  * Check if is contact page.
