@@ -89,7 +89,7 @@ if ( ! function_exists( 'shop_isle_paging_nav' ) ) {
 		echo '<div class="clear"></div>';
 		?>
 		<nav class="navigation paging-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'shop-isle' ); ?></h1>
+			<h4 style="display:none"><?php _e( 'Posts navigation', 'shop-isle' ); ?></h4>
 			<div class="nav-links">
 				<?php if ( get_next_posts_link() ) : ?>
 					<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'shop-isle' ) ); ?></div>

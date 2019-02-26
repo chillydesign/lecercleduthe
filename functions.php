@@ -67,3 +67,25 @@ require get_template_directory() . '/inc/init.php';
 
  }
  add_action( 'after_setup_theme', 'remove_json_api' );
+
+
+
+ function chilly_map( $atts, $content = null ) {
+
+     $attributes = shortcode_atts( array(
+         'title' => "le Cercle du Thé",
+         'lat' => 46.3837128,
+         'lng' => 6.237599,
+     ), $atts );
+
+
+
+     $title = $attributes['title'];
+     $lat = $attributes['lat'];
+     $lng = $attributes['lng'];
+     $chilly_map = '<div id="map_container"></div>';
+     $chilly_map .= "<script> var map_location = {lat: ". $lat . ", lng:  ". $lng . ", title:  '" . $title . "'  }; </script>";
+     return $chilly_map;
+
+ }
+ add_shortcode( 'chilly_map', 'chilly_map' );
