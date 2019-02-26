@@ -102,19 +102,28 @@ if ( ! function_exists( 'shop_isle_primary_navigation' ) ) {
 
 					<div class="header-menu-wrap">
 						<div class="collapse navbar-collapse" id="custom-collapse">
+                            <div class="nav navbar-nav navbar-right">
+                                <ul>
+                                <?php
 
-							<?php
-
-							wp_nav_menu(
-								array(
-									'theme_location' => 'primary',
-									'container'      => false,
-									'menu_class'     => 'nav navbar-nav navbar-right',
-								)
-							);
-							?>
-
-						</div>
+                                wp_nav_menu(
+                                    array(
+                                        'theme_location' => 'primary',
+                                        'container'      => '',
+                                        'menu_class'     => '',
+                                        'before'          => '',
+                                        'after'           => '',
+                                        'link_before'     => '',
+                                        'link_after'      => '',
+                                        'items_wrap'      => '%3$s',
+                                        'depth'           => 0,
+                                        'walker'          => ''
+                                    )
+                                );
+                                ?>
+                                </ul>
+                            </div>
+                        </div>
 					</div>
 
 					<?php if ( class_exists( 'WooCommerce' ) ) : ?>

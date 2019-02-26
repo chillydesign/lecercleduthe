@@ -144,7 +144,7 @@
 					}
 				);
 			}
-			
+
 			/* ---------------------------------------------- /*
 			* Youtube video background
 			/* ---------------------------------------------- */
@@ -201,7 +201,7 @@
 
 			function navbarSubmenu(width) {
 				if (width > 768) {
-					$( '.navbar-custom .navbar-nav > li.menu-item-has-children' ).on(
+					$( '.navbar-custom .navbar-nav  li.menu-item-has-children' ).on(
 						'click mouseover', function() {
 							var MenuLeftOffset  = $( '.sub-menu', $( this ) ).offset().left;
 							var Menu1LevelWidth = $( '.sub-menu', $( this ) ).width();
@@ -229,10 +229,10 @@
 
 			function hoverDropdown(width, mobileTest) {
 				if ((width > 768) && (mobileTest !== true)) {
-					$( '.navbar-custom .navbar-nav > li, .navbar-custom li.dropdown > ul > li' ).removeClass( 'open' );
+					$( '.navbar-custom .navbar-nav  li, .navbar-custom li.dropdown  ul  li' ).removeClass( 'open' );
 					var delay = 0;
 					var setTimeoutConst;
-					$( '.navbar-custom .navbar-nav > li, .navbar-custom li > ul > li' ).hover(
+					$( '.navbar-custom .navbar-nav  li, .navbar-custom li  ul  li' ).hover(
 						function() {
 							var $this       = $( this );
 							setTimeoutConst = setTimeout(
@@ -249,7 +249,7 @@
 						}
 					);
 				} else {
-					$( '.navbar-custom .navbar-nav > li, .navbar-custom li > ul > li' ).unbind( 'mouseenter mouseleave' );
+					$( '.navbar-custom .navbar-nav  li, .navbar-custom li  ul li' ).unbind( 'mouseenter mouseleave' );
 					$( '.navbar-custom [data-toggle=dropdown]' ).not( '.binded' ).addClass( 'binded' ).on(
 						'click', function(event) {
 							event.preventDefault();
@@ -305,7 +305,7 @@
 					animation: 'slide',
 					smoothHeight: true,
 				}
-			);	
+			);
 
 			/* ---------------------------------------------- /*
 			* Owl slider
@@ -319,7 +319,7 @@
 					if ($( this ).data( 'items' ) > 0) {
 						items = $( this ).data( 'items' );
 					}
-					
+
 					// Check pagination true/false
 					var pagination;
 					if (($( this ).data( 'pagination' ) > 0) && ($( this ).data( 'pagination' ) === true)) {
@@ -664,7 +664,7 @@
 			checkNavbarScrollPoint();
 		}
 	);
-	
+
 	// On screen scroll add scroll-related class
 	$( window ).on(
 		'scroll', function () {
