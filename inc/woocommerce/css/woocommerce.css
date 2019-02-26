@@ -1463,12 +1463,12 @@ table.shop_table_responsive tr td:before {
 ul.products li.product {
 	float: left;
 	clear: none;
-	width: 25%;
+	width: 33.3%;
 	font-size: 0.857em;
 }
 
 .shop-with-sidebar ul.products li.product {
-	width: 33.2%;
+	width: 49.9%;
 }
 
 .shop-with-sidebar ul.products li.product:nth-child(3n+1) {

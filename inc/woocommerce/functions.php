@@ -144,11 +144,13 @@ if ( ! function_exists( 'shop_isle_shop_page_wrapper_end' ) ) {
  * @return integer products per row
  * @since  1.0.0
  */
+
+ // NOTE CHARLES CHANGE NUMBER OF COLUMNS IN PRODUCT ARCHIVE PAGE
 function shop_isle_loop_columns() {
 	if ( is_active_sidebar( 'shop-isle-sidebar-shop-archive' ) ) {
-		return apply_filters( 'shop_isle_loop_columns', 3 ); // 3 products per row
+		return apply_filters( 'shop_isle_loop_columns', 2 ); // 2 products per row
 	} else {
-		return apply_filters( 'shop_isle_loop_columns', 4 ); // 4 products per row
+		return apply_filters( 'shop_isle_loop_columns', 3 ); // 3 products per row
 	}
 }
 
