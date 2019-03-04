@@ -2346,10 +2346,10 @@ body.admin-bar .navbar {
 
 .navbar-custom .sub-menu > li > a,
 .navbar-custom .children > li > a {
-	padding: 11px 15px;
+	padding: 8px 15px;
 	border-bottom: 1px solid rgba(73, 71, 71, 0.15) !important;
 	color: #999;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 }
 
 .navbar-custom .sub-menu .sub-menu,
@@ -2420,7 +2420,7 @@ body.admin-bar .navbar {
 
 .navbar-nav .sub-menu,
 .navbar-nav .children {
-	min-width: 180px;
+	min-width: 230px;
 	font-size: 11px;
 }
 

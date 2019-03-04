@@ -685,7 +685,6 @@
 
     // NOTE CHARLES do modal popup when add to cart
     if (typeof added_to_cart_now != 'undefined') {
-        console.log($.magnificPopup)
         $.magnificPopup.open({
             items: {
                  // can be a HTML string, jQuery object, or CSS selector

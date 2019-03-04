@@ -47,29 +47,15 @@ require get_template_directory() . '/inc/init.php';
 
  }
  add_action( 'init', 'disable_wp_emojicons' );
- function remove_json_api () {
-
-     // Remove the REST API lines from the HTML Header
-     remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
-     remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
-     // Remove the REST API endpoint.
-     remove_action( 'rest_api_init', 'wp_oembed_register_route' );
-     // Turn off oEmbed auto discovery.
-     add_filter( 'embed_oembed_discover', '__return_false' );
-     // Don't filter oEmbed results.
-     remove_filter( 'oembed_dataparse', 'wp_filter_oembed_result', 10 );
-     // Remove oEmbed discovery links.
-     remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
-     // Remove oEmbed-specific JavaScript from the front-end and back-end.
-     remove_action( 'wp_head', 'wp_oembed_add_host_js' );
-    // Remove all embeds rewrite rules.
-   // add_filter( 'rewrite_rules_array', 'disable_embeds_rewrites' );
-
- }
- add_action( 'after_setup_theme', 'remove_json_api' );
 
 
 
+
+
+
+
+
+// ADD MAP SHORTCODE
  function chilly_map( $atts, $content = null ) {
 
      $attributes = shortcode_atts( array(
@@ -89,10 +75,32 @@ require get_template_directory() . '/inc/init.php';
 
  }
  add_shortcode( 'chilly_map', 'chilly_map' );
+// ADD MAP SHORTCODE
+
+
+
+
+// ADD PROFESSIONAL Customer role.
+add_action( 'init', 'add_professional_customer_role', 5 );
+function add_professional_customer_role() {
+
+    add_role(
+        'professional_customer',
+        'Professional Customer',
+        array(
+            'read' => true,
+        )
+    );
+
+}
+// ADD PROFESSIONAL Customer role.
+
+
+
 
 
  // do modal popup when add to cart
- add_action( 'woocommerce_add_to_cart', 'trigger_for_ajax_add_to_cart', 10, 6 );
+ add_action( 'woocommerce_add_to_cart', 'trigger_for_ajax_add_to_cart', 20, 6 );
  function trigger_for_ajax_add_to_cart( $cart_item_key, $product_id, $quantity, $variation_id, $variation, $cart_item_data ) {
 
      $product = get_post($product_id);
@@ -105,6 +113,68 @@ require get_template_directory() . '/inc/init.php';
      $str .= '</p>';
      $str .= '</div>';
      $str .= '<script type="text/javascript"> var added_to_cart_now = true; </script>';
-
      echo $str;
  }
+ // do modal popup when add to cart
+
+
+
+// PROFESSIONAL SIGN UP FORM
+ function is_professional_signup_form() {
+     if (isset($_GET['register'])) {
+         if ($_GET['register']  == 'professional' ) {
+             return true;
+         }
+     }
+     return false;
+
+ }
+
+ add_action( 'woocommerce_register_form_start', 'wooc_extra_register_fields' );
+ function wooc_extra_register_fields() {
+     if (is_professional_signup_form()) {
+         $vat_number = ( ! empty( $_POST['billing_phone'] ) ) ? sanitize_text_field( $_POST['billing_phone'] ) : '';
+         ?>
+         <p class="form-row form-row-wide">
+             <label for="billing_phone"><?php _e( 'Vat Number', 'woocommerce' ); ?> <span class="required">*</span> </label>
+             <input type="text" required class="input-text" name="billing_phone" id="billing_phone" value="<?php echo $vat_number; ?>" />
+         </p>
+         <?php
+     }; // if for professional form
+ }
+
+ // IF WANT VAT NUMBER TO BE PRESENT
+ add_action( 'woocommerce_register_post', 'wooc_validate_extra_register_fields', 10, 3 );
+ function wooc_validate_extra_register_fields( $username, $email, $validation_errors ) {
+     if (is_professional_signup_form()) {
+
+         if ( isset( $_POST['billing_phone'] ) && empty( $_POST['billing_phone'] ) ) {
+             $validation_errors->add( 'billing_phone', __( ' VAT number is required!', 'woocommerce' ) );
+         }
+         return $validation_errors;
+     }; // if for professional form
+ }
+
+
+ add_action( 'woocommerce_created_customer', 'wooc_save_extra_register_fields' );
+ function wooc_save_extra_register_fields( $customer_id ) {
+
+     if (is_professional_signup_form()) {
+
+         if ( isset( $_POST['billing_phone'] ) ) {
+             $vat_number = $_POST['billing_phone'];
+             if ($vat_number != '') {
+
+                 // Phone input filed which is used in WooCommerce
+                 update_user_meta( $customer_id, 'billing_phone', sanitize_text_field( $vat_number ) );
+
+                 $customer = new WP_User( $customer_id );
+                 // Remove role
+                 $customer->remove_role( 'customer' );
+                 // Add role
+                 $customer->add_role( 'professional_customer' );
+             }
+         }
+     }; // if for professional form
+ }
+ // PROFESSIONAL SIGN UP FORM
