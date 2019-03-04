@@ -89,3 +89,22 @@ require get_template_directory() . '/inc/init.php';
 
  }
  add_shortcode( 'chilly_map', 'chilly_map' );
+
+
+ // do modal popup when add to cart
+ add_action( 'woocommerce_add_to_cart', 'trigger_for_ajax_add_to_cart', 10, 6 );
+ function trigger_for_ajax_add_to_cart( $cart_item_key, $product_id, $quantity, $variation_id, $variation, $cart_item_data ) {
+
+     $product = get_post($product_id);
+     $str = '<div  id="added_popup" class="white_popup">';
+     $str .= "<p>L'article  <strong>" . $product->post_title . "</strong> a bien été ajouté à votre panier</p>" ;
+     $str .= '<p>';
+     $str .= '<a href="'. esc_url( wc_get_cart_url() )  .'" class="button button_black">Aller à mon panier</a>';
+     $str .= ' <span>ou</span> ';
+     $str .= '<a href="#" class="close_button button">Continuer mes achats</a>';
+     $str .= '</p>';
+     $str .= '</div>';
+     $str .= '<script type="text/javascript"> var added_to_cart_now = true; </script>';
+
+     echo $str;
+ }

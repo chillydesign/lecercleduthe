@@ -683,6 +683,27 @@
 	);
 
 
+    // NOTE CHARLES do modal popup when add to cart
+    if (typeof added_to_cart_now != 'undefined') {
+        console.log($.magnificPopup)
+        $.magnificPopup.open({
+            items: {
+                 // can be a HTML string, jQuery object, or CSS selector
+                src: $('#added_popup'),
+                type: 'inline'
+            }
+        });
+        $('.close_button').on('click', function(e){
+            e.preventDefault();
+            $.magnificPopup.close();
+        });
+
+
+    }
+    // NOTE CHARLES do modal popup when add to cart
+
+
+
 
     // NOTE CHARLES ADD CHILLY MAPS
     // MAP

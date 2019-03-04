@@ -6605,3 +6605,51 @@ WP Show Posts
 		margin-top: 32px;
 	}
 }
+
+
+
+
+.white_popup {
+  position: relative;
+  background: #FFF;
+  padding: 40px;
+  width:auto;
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.white_popup  a.button {
+    display: inline-block;
+    padding: 10px 15px;
+    color: black;
+    background: white;
+    margin: 0 5px 5px;
+
+    position: relative;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border: 2px solid black;
+
+}
+.white_popup a:hover {
+    background: #ddd;
+    color: black;
+}
+.white_popup a.button_black {
+    background: black;
+    color: white;
+}
+
+.white_popup a.button_black:hover {
+    background: #444;
+}
+
+
+.white_popup span {
+    display: inline-block;
+    margin: 0 5px;
+    font-style: italic;
+    color: #888;
+}
