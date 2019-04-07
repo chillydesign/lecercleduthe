@@ -85,10 +85,13 @@ foreach ( $shop_isle_banners_decoded as $shop_isle_banner ) {
 		$image_markup = '<a href="' . esc_url( $link ) . '"><img src="' . esc_url( $image_url ) . '" ' . $shop_isle_alt_image . '></a>';
 	}
 	echo $image_markup;
+
+    if ( $shop_isle_banner->text !== null && $shop_isle_banner->text !== 'undefined' )  {
+        echo '<h4>'.  $shop_isle_banner->text .'</h4>';
+    }
 	echo '</div></div></div>';
 }
 
 echo '</div>';
 echo '</div>';
 echo '</section>';
-

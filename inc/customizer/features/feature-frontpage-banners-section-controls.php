@@ -94,7 +94,7 @@ function shop_isle_banners_controls_customize_register( $wp_customize ) {
 				'priority'                      => 3,
 				'shop_isle_image_control'       => true,
 				'shop_isle_link_control'        => true,
-				'shop_isle_text_control'        => false,
+				'shop_isle_text_control'        => true,
 				'shop_isle_subtext_control'     => false,
 				'shop_isle_label_control'       => false,
 				'shop_isle_icon_control'        => false,
