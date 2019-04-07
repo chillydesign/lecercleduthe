@@ -155,4 +155,3 @@ function shop_isle_thumb_cols() {
 	return 6;
 }
 add_filter( 'woocommerce_product_thumbnails_columns', 'shop_isle_thumb_cols', 99 );
-

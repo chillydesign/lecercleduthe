@@ -628,7 +628,7 @@ if ( ! function_exists( 'shop_isle_loop_product_thumbnail' ) ) {
 	 */
 	function shop_isle_loop_product_thumbnail() {
 		global $post,$product;
-		$image_size = 'shop_catalog';
+		$image_size = 'medium'; //  CHARLES use  large square thumbnail to prevent blurryness and not have rectnagul images 
 
 		if ( function_exists( 'method_exists' ) && method_exists( $product, 'get_gallery_image_ids' ) ) {
 			$shop_isle_gallery_attachment_ids = $product->get_gallery_image_ids();

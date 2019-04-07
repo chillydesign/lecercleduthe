@@ -141,7 +141,7 @@ function add_professional_customer_role() {
          $billing_address_2 = ( ! empty( $_POST['billing_address_2'] ) ) ? sanitize_text_field( $_POST['billing_address_2'] ) : '';
          $billing_city = ( ! empty( $_POST['billing_city'] ) ) ? sanitize_text_field( $_POST['billing_city'] ) : '';
          $billing_postcode = ( ! empty( $_POST['billing_postcode'] ) ) ? sanitize_text_field( $_POST['billing_postcode'] ) : '';
-         $billing_country = ( ! empty( $_POST['billing_country'] ) ) ? sanitize_text_field( $_POST['billing_country'] ) : '';
+         $billing_country = ( ! empty( $_POST['billing_country'] ) ) ? sanitize_text_field( $_POST['billing_country'] ) : 'CH';
          $remarque = ( ! empty( $_POST['remarque'] ) ) ? sanitize_text_field( $_POST['remarque'] ) : '';
 
          ?>
@@ -204,7 +204,15 @@ function add_professional_customer_role() {
          </p>
          <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
              <label for="billing_country"><?php _e( 'billing_country', 'webfactor' ); ?> <span class="required">*</span> </label>
-             <input type="text" required class="input-text" name="billing_country" id="billing_country" value="<?php echo $billing_country; ?>" />
+             <select name="billing_country" id="billing_country">
+                 <?php $countries  = WC()->countries->get_countries(); ?>
+                 <?php foreach ($countries as $code => $country) : ?>
+                     <?php $selected =  ($code ==  $billing_country ) ? 'selected="selected"' : ''; ?>
+                     <option <?php echo $selected; ?> value="<?php echo $code; ?>"><?php echo $country; ?></option>
+                 <?php endforeach; ?>
+
+             </select>
+
          </p>
 
 
@@ -336,5 +344,3 @@ function chilly_field_set_in_post($field) {
      </table>
  <?php
  }
-
- 

@@ -134,19 +134,19 @@ while ( $shop_isle_latest_loop->have_posts() ) {
 	}
 
 	if ( has_post_thumbnail( $shop_isle_latest_loop->post->ID ) ) {
-		echo get_the_post_thumbnail( $shop_isle_latest_loop->post->ID, 'shop_catalog' );
+		echo get_the_post_thumbnail( $shop_isle_latest_loop->post->ID, 'medium' );
 
 		if ( $shop_isle_gallery_attachment_ids ) {
-			echo wp_get_attachment_image( $shop_isle_gallery_attachment_ids[0], 'shop_catalog' );
+			echo wp_get_attachment_image( $shop_isle_gallery_attachment_ids[0], 'medium' );
 		}
 	} elseif ( $shop_isle_gallery_attachment_ids ) {
 
 		if ( $shop_isle_gallery_attachment_ids[0] ) {
-			echo wp_get_attachment_image( $shop_isle_gallery_attachment_ids[0], 'shop_catalog' );
+			echo wp_get_attachment_image( $shop_isle_gallery_attachment_ids[0], 'medium' );
 		}
 
 		if ( $shop_isle_gallery_attachment_ids[1] ) {
-			echo wp_get_attachment_image( $shop_isle_gallery_attachment_ids[1], 'shop_catalog' );
+			echo wp_get_attachment_image( $shop_isle_gallery_attachment_ids[1], 'medium' );
 		}
 	} else {
 		if ( function_exists( 'wc_placeholder_img_src' ) ) {
