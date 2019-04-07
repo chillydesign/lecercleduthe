@@ -157,3 +157,35 @@ function add_content_to_above_price(){
 
 // NOTE CHARLES REMOVE META SKU TAGS ETC FROM PRODUCT PAGE
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
+
+// NOTE CHARLES SEND EMAIL TO ADMIN ON CREATION OF CUSTOMER  PROFESSIONAL ACCOUNT
+add_action( 'woocommerce_created_customer', 'action_woocommerce_created_customer', 10, 3 );
+function action_woocommerce_created_customer( $customer_id, $new_customer_data, $password_generated ) {
+
+    $tva_number  = get_user_meta( $customer_id, 'tva_number', true );
+
+    if ( $tva_number && $tva_number != '' ) {
+
+        // load the mailer class
+        $mailer = WC()->mailer();
+        $customer = get_user_by( 'id', $customer_id );
+        $headers = "Content-Type: text/html\r\n";
+        $recipient =   get_option( 'admin_email' );
+        $subject = __('New Customer', 'chilly');
+        $template = 'emails/admin-new-customer.php';
+        $contents =  wc_get_template_html( $template, array(
+            'customer'      => $customer,
+            'email_heading' => $subject,
+            'sent_to_admin' => true,
+            'plain_text'    => false,
+            'email'         => $mailer
+        ) );
+
+
+        $mailer->send( $recipient, $subject, $contents, $headers );
+    } // end if is professional customer
+
+
+
+};
