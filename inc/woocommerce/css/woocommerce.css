@@ -2296,7 +2296,7 @@ ul.products li.product {
 	overflow: hidden;
 }
 
-ul.products li.product:nth-child(4n+1) {
+ul.products li.product:nth-child(3n+1) {
 	clear: left;
 }
 
