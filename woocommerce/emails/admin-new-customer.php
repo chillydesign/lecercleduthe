@@ -23,9 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 * @hooked WC_Emails::email_header() Output the email header
 */
 do_action( 'woocommerce_email_header', $email_heading, $email );
-
-$customer = get_user_by( 'id', $customer_id );
-
+$customer_id = $customer->ID;
 
 $first_name = get_user_meta($customer_id, 'first_name');
 $last_name = get_user_meta($customer_id, 'last_name');

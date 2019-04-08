@@ -257,6 +257,9 @@ function chilly_field_set_in_post($field) {
 }
 
 
+
+
+
  add_action( 'woocommerce_created_customer', 'wooc_save_extra_register_fields' );
  function wooc_save_extra_register_fields( $customer_id ) {
 
@@ -290,6 +293,27 @@ function chilly_field_set_in_post($field) {
              $customer->remove_role( 'customer' );
              // Add role
              $customer->add_role( 'professional_customer' );
+
+
+             // send email to notify admin
+             $mailer = WC()->mailer();
+             $headers = "Content-Type: text/html\r\n";
+             $recipient =   get_option( 'admin_email' );
+             $subject = __('Le Cercle du thé : Création d’un nouveau compte professionnel', 'chilly');
+             $template = 'emails/admin-new-customer.php';
+             $contents =  wc_get_template_html( $template, array(
+                 'customer'      => $customer,
+                 'email_heading' => $subject,
+                 'sent_to_admin' => true,
+                 'plain_text'    => false,
+                 'email'         => $mailer
+             ) );
+
+
+             $mailer->send( $recipient, $subject, $contents, $headers );
+
+
+
          }
      }; // if for professional form
  }

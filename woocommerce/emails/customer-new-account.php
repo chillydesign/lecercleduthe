@@ -36,7 +36,7 @@ endif; //  end if customer
 
 
 <?php /* translators: %s Customer username */ ?>
-<p>Bonjour,></p>
+<p>Bonjour, </p>
 
 <?php if ($is_professional) : ?>
 
