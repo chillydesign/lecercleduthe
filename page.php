@@ -17,11 +17,6 @@ get_header(); ?>
 <div class="main">
 
 	<?php
-	if ( ( function_exists( 'is_cart' ) && is_cart() ) || ( function_exists( 'is_checkout' ) && is_checkout() ) || ( function_exists( 'is_wc_endpoint_url' ) && is_wc_endpoint_url( 'lost-password' ) ) || ( function_exists( 'is_account_page' ) && is_account_page() ) ) :
-		echo '<section class="module module-cart-top">';
-	else :
-            // move this to line 37 if you dont want images on woocommerce pages
-    endif;
 
 		$thumb_tmp = get_the_post_thumbnail_url();
 
@@ -33,7 +28,6 @@ get_header(); ?>
 		} else {
 			echo '<section class="page-header-module module bg-dark">';
 		}
-
 
 	?>
 
@@ -74,6 +68,19 @@ get_header(); ?>
 	<?php
 	echo '</section>';
 	?>
+
+
+
+    <?php
+	if ( ( function_exists( 'is_account_page' ) && is_account_page() ) ) :
+	else : ?>
+        <div class="container">
+        <?php get_template_part('signin-alert'); ?>
+        </div>
+	<?php endif; ?>
+
+
+
 
 
 	<!-- Pricing start -->

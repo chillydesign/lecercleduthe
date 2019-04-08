@@ -2010,6 +2010,7 @@ table.cart td.actions input {
 
 .module-cart-top {
 	padding-bottom: 0;
+    	padding-top: 0;
 }
 
 .module-cart-bottom {

@@ -2380,6 +2380,14 @@ body.admin-bar .navbar {
 	background: none;
 }
 
+
+ .navbar-nav li {
+     transition: all 0.3s;
+ }
+ .navbar-nav li.open {
+    background: rgba(255,255,255,0.1);
+}
+
 .navbar-custom .sub-menu > li > a:hover,
 .navbar-custom .children > li > a:hover {
 	background: rgba(255, 255, 255, 0.1) !important;
@@ -6669,5 +6677,26 @@ h6 a, a h6 {
 }
 h6 a:hover, a:hover h6 {
     background: black;
+    color: white;
+}
+
+
+
+.black_box  {
+    background: black;
+    padding: 10px;
+    text-align: center;
+    margin: 0 0 20px;
+    color: white;
+    z-index: 100;
+    position: relative;
+    top: 0px;
+    color: white;
+    display: block;
+
+    transition: all 0.3s;
+}
+.black_box:hover {
+    background: #555;
     color: white;
 }
