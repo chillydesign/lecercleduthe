@@ -4422,6 +4422,22 @@ Shop
 	float: right !important;
 }
 
+body .navbar-cart {
+    width: 120px;
+}
+
+.header-profile {
+    float: left;
+    width: 25px;
+    position: relative;
+    left: 9px;
+}
+
+body .navbar-cart {
+    display: inline-block !important;
+    padding-top: 5px;
+}
+
 .navbar-custom .navbar-cart > a {
 	position: relative;
 	font-size: 12px;

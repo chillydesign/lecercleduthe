@@ -155,6 +155,13 @@ if ( ! function_exists( 'shop_isle_primary_navigation' ) ) {
 								</div>
 							</div>
 
+                            <div class="header-profile">
+                                <a title="Profile" href="<?php echo  esc_url( wc_get_page_permalink('myaccount')); ?>">
+                                	<div class="glyphicon glyphicon glyphicon-user header-search-button"></div>
+                                </a>
+                            </div>
+
+
 							<?php if ( function_exists( 'WC' ) ) : ?>
 								<div class="navbar-cart-inner">
 									<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'shop-isle' ); ?>" class="cart-contents">
