@@ -25,17 +25,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_email_header', $email_heading, $email );
 $customer_id = $customer->ID;
 
-$first_name = get_user_meta($customer_id, 'first_name');
-$last_name = get_user_meta($customer_id, 'last_name');
-$billing_company = get_user_meta($customer_id, 'billing_company');
-$tva_number = get_user_meta($customer_id, 'tva_number');
-$billing_phone = get_user_meta($customer_id, 'billing_phone');
-$billing_address_1 = get_user_meta($customer_id, 'billing_address_1');
-$billing_address_2 = get_user_meta($customer_id, 'billing_address_2');
-$billing_city = get_user_meta($customer_id, 'billing_city');
-$billing_postcode = get_user_meta($customer_id, 'billing_postcode');
-$billing_country = get_user_meta($customer_id, 'billing_country');
-$remarque = get_user_meta($customer_id, 'remarque');
+$first_name = get_user_meta($customer_id, 'first_name', true);
+$last_name = get_user_meta($customer_id, 'last_name', true);
+$billing_company = get_user_meta($customer_id, 'billing_company', true);
+$tva_number = get_user_meta($customer_id, 'tva_number', true);
+$billing_phone = get_user_meta($customer_id, 'billing_phone', true);
+$billing_address_1 = get_user_meta($customer_id, 'billing_address_1', true);
+$billing_address_2 = get_user_meta($customer_id, 'billing_address_2', true);
+$billing_city = get_user_meta($customer_id, 'billing_city', true);
+$billing_postcode = get_user_meta($customer_id, 'billing_postcode', true);
+$billing_country = get_user_meta($customer_id, 'billing_country', true);
+$remarque = get_user_meta($customer_id, 'remarque', true);
 
 
 $styling = 'padding:7px;font-size:13px;border:0;margin:0';

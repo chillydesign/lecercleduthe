@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 <?php $is_professional = false;
-$customer =  get_user_by( 'email', $user_login );
+$customer =  get_user_by( 'login', $user_login );
 if ($customer):
     $tva_number  = get_user_meta( $customer->ID, 'tva_number', true );
     if ( $tva_number && $tva_number != '' ):
