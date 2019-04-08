@@ -157,7 +157,3 @@ function add_content_to_above_price(){
 
 // NOTE CHARLES REMOVE META SKU TAGS ETC FROM PRODUCT PAGE
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
-
-
-
-};
