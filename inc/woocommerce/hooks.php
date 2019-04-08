@@ -169,13 +169,12 @@ function action_woocommerce_created_customer( $customer_id, $new_customer_data, 
 
         // load the mailer class
         $mailer = WC()->mailer();
-        $customer = get_user_by( 'id', $customer_id );
         $headers = "Content-Type: text/html\r\n";
         $recipient =   get_option( 'admin_email' );
-        $subject = __('New Customer', 'chilly');
+        $subject = __('Le Cercle du thé : Création d’un nouveau compte professionnel', 'chilly');
         $template = 'emails/admin-new-customer.php';
         $contents =  wc_get_template_html( $template, array(
-            'customer'      => $customer,
+            'customer_id'      => $customer_id,
             'email_heading' => $subject,
             'sent_to_admin' => true,
             'plain_text'    => false,

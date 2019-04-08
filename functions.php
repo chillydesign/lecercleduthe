@@ -145,15 +145,7 @@ function add_professional_customer_role() {
          $remarque = ( ! empty( $_POST['remarque'] ) ) ? sanitize_text_field( $_POST['remarque'] ) : '';
 
          ?>
-
-         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-             <label for="title"><?php _e( ' Personne de contact', 'webfactor' ); ?> </label>
-             <select name="title" id="title">
-                 <option selected value="Monsieur">Monsieur</option>
-                 <option value="Madame">Madame</option>
-                 <option value="Madamoiselle">Madamoiselle</option>
-             </select>
-         </p>
+         <h4>Personne de contact</h4>
 
 
          <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
@@ -279,7 +271,7 @@ function chilly_field_set_in_post($field) {
           ) {
 
 
-             update_user_meta($customer_id, 'title', sanitize_text_field( $_POST['title']));
+
              update_user_meta($customer_id, 'first_name', sanitize_text_field( $_POST['first_name']));
              update_user_meta($customer_id, 'last_name', sanitize_text_field( $_POST['last_name']));
              update_user_meta($customer_id, 'billing_company', sanitize_text_field( $_POST['billing_company']));
@@ -307,7 +299,7 @@ function chilly_field_set_in_post($field) {
 
 
 
- // SHOW EXTRA USER META ON ADMIN PAGES // title // tva_number // remarque
+ // SHOW EXTRA USER META ON ADMIN PAGES  // tva_number // remarque
  add_action( 'show_user_profile', 'chilly_extra_user_profile_fields' );
  add_action( 'edit_user_profile', 'chilly_extra_user_profile_fields' );
  add_action( 'personal_options_update', 'chilly_save_extra_user_profile_fields' );
@@ -315,7 +307,7 @@ function chilly_field_set_in_post($field) {
 
  function chilly_save_extra_user_profile_fields( $user_id ) {
      if ( !current_user_can( 'edit_user', $user_id ) ) { return false; }
-     update_user_meta( $user_id, 'title', $_POST['title'] );
+
      update_user_meta( $user_id, 'tva_number', $_POST['tva_number'] );
      update_user_meta( $user_id, 'remarque', $_POST['remarque'] );
  }
@@ -323,12 +315,6 @@ function chilly_field_set_in_post($field) {
  function chilly_extra_user_profile_fields( $user ) { ?>
      <h3>Extra Info</h3>
      <table class="form-table">
-         <tr>
-             <th><label for="title">Title</label></th>
-             <td>
-                 <input type="text" id="title" name="title" size="20" value="<?php echo esc_attr( get_the_author_meta( 'title', $user->ID )); ?>">
-             </td>
-         </tr>
          <tr>
              <th><label for="tva_number">tva_number</label></th>
              <td>
@@ -344,6 +330,7 @@ function chilly_field_set_in_post($field) {
      </table>
  <?php
  }
+
 
 
 
