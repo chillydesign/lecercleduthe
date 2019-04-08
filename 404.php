@@ -23,33 +23,20 @@ get_header(); ?>
 		?>
 			<div class="hs-caption">
 				<div class="caption-content">
-					<?php
-						/* title */
-						$shop_isle_404_title = get_theme_mod( 'shop_isle_404_title', __( 'Error 404', 'shop-isle' ) );
-					if ( ! empty( $shop_isle_404_title ) ) :
-						echo '<div class="hs-title-size-4 font-alt mb-30 error-page-title">';
-						echo shop_isle_sanitize_text( $shop_isle_404_title );
-						echo '</div>';
-						endif;
 
-						/* text */
-						$shop_isle_404_text = get_theme_mod( 'shop_isle_404_text', 'The requested URL was not found on this server.<br> That is all we know.' );
-					if ( ! empty( $shop_isle_404_text ) ) :
-						echo '<div class="font-alt error-page-text">';
-						echo shop_isle_sanitize_text( $shop_isle_404_text );
-						echo '</div>';
-						endif;
 
-						/* button */
-						$shop_isle_404_link  = get_theme_mod( 'shop_isle_404_link', '#' );
-						$shop_isle_404_label = get_theme_mod( 'shop_isle_404_label', __( 'Back to home page', 'shop-isle' ) );
+                    <div class="hs-title-size-4 font-alt mb-30 error-page-title">
+                        Erreur 404
+                    </div>
+                    <div class="font-alt error-page-text">
+                        L'URL demandée n'a pas été trouvée sur ce serveur. <br> C'est tout ce que nous savons.
+                    </div>
 
-					if ( ! empty( $shop_isle_404_link ) && ! empty( $shop_isle_404_label ) ) :
-						echo '<div class="font-alt mt-30 error-page-button-text">';
-						echo '<a href="' . esc_url( $shop_isle_404_link ) . '" class="btn btn-border-w btn-round">' . esc_html( $shop_isle_404_label ) . '</a>';
-						echo '</div>';
-						endif;
-					?>
+
+                    <div class="font-alt mt-30 error-page-button-text">
+                        <a href="<?php echo  esc_url( home_url( '/' ) ); ?>" class="btn btn-border-w btn-round">Retour à la page d'accueil</a>
+                    </div>
+
 				</div>
 			</div>
 
