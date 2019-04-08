@@ -48,7 +48,7 @@ endif; //  end if customer
 
 <?php endif;  // end if is not professional user ?>
 
-<p>Vous pouvez vous connecter à votre compte à l’adresse <a href="<?php echo  esc_url( wc_get_page_permalink( 'myaccount' ); ?>">lecercleduthe.com</a> avec votre adresse email et le mot de passe que vous avez choisi pour démarrer vos achats.</p>
+<p>Vous pouvez vous connecter à votre compte à l’adresse <a href="<?php echo  esc_url( wc_get_page_permalink('myaccount')); ?>">lecercleduthe.com</a> avec votre adresse email et le mot de passe que vous avez choisi pour démarrer vos achats.</p>
 
 <p>A bientôt sur lecercleduthe.com!</p>
 
