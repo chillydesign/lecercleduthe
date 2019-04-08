@@ -65,9 +65,9 @@ get_header(); ?>
 			</div>
 		</div>
 		<?php
-		if ( ( function_exists( 'is_cart' ) && is_cart() ) || ( function_exists( 'is_checkout' ) && is_checkout() ) || ( function_exists( 'is_wc_endpoint_url' ) && is_wc_endpoint_url( 'lost-password' ) ) || ( function_exists( 'is_account_page' ) && is_account_page() ) ) :
-			echo '<hr class="divider-w pt-20"><!-- divider -->';
-		endif;
+		// if ( ( function_exists( 'is_cart' ) && is_cart() ) || ( function_exists( 'is_checkout' ) && is_checkout() ) || ( function_exists( 'is_wc_endpoint_url' ) && is_wc_endpoint_url( 'lost-password' ) ) || ( function_exists( 'is_account_page' ) && is_account_page() ) ) :
+		// 	echo '<hr class="divider-w pt-20"><!-- divider -->';
+		// endif;
 		?>
 	</div><!-- .container -->
 
