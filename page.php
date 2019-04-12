@@ -71,13 +71,15 @@ get_header(); ?>
 
 
 
-    <?php
-	if ( ( function_exists( 'is_account_page' ) && is_account_page() ) ) :
-	else : ?>
-        <div class="container">
-        <?php get_template_part('signin-alert'); ?>
-        </div>
-	<?php endif; ?>
+<?php
+    // ADD BANNER TO GET PEOPLE TO SIGN IN
+    // if ( ( function_exists( 'is_account_page' ) && is_account_page() ) ) :
+    // else :
+    //     echo '<div class="container">';
+    //     get_template_part('signin-alert');
+    //     echo '</div>';
+    // endif;
+?>
 
 
 
