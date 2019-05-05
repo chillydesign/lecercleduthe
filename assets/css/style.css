@@ -5,9 +5,9 @@
 /* @import url("//fonts.googleapis.com/css?family=Volkhov:400italic"); */
 
 
-@import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,700,700i&amp;subset=latin-ext");
+@import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,800,800i&amp;subset=latin-ext");
 
-@import url("//fonts.googleapis.com/css?family=Playfair+Display:400,400i,900,900i&amp;subset=latin-ext");
+@import url("//fonts.googleapis.com/css?family=Playfair+Display:400,400i&amp;subset=latin-ext");
 
 
 
@@ -1549,7 +1549,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	color: #333;
+	color: #222;
 	background: #fff;
 	font: 400 16px/1.9 "Source Sans Pro" ,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	-webkit-font-smoothing: antialiased;
@@ -1711,7 +1711,7 @@ input[type="radio"] {
 	padding: 6px 12px;
 	border: 1px solid #eaeaea;
 	border-radius: 2px;
-	color: #333;
+	color: #222;
 
 	font-size: 12px;
 	letter-spacing: 2px;
@@ -2024,7 +2024,7 @@ button[type="submit"]:hover {
 
 .examples.bg-dark {
 	border: 0;
-	background: #333;
+	background: #222;
 }
 
 .et-icons .box1 {
@@ -2604,7 +2604,7 @@ Home Section
 	margin-right: 6px;
 	border: 1px solid #ccc;
 	border-radius: 6px;
-	background: #333;
+	background: #222;
 }
 
 .owl-dot {
@@ -2731,7 +2731,7 @@ Sections
 .main {
 	position: relative;
 	z-index: 1;
-	color: #333;
+	color: #222;
 
 	-webkit-box-flex: 1 0 auto;
 	-webkit-flex: 1 0 auto;
@@ -3123,7 +3123,7 @@ footer.footer {
 
 .shop_isle_footer_sidebar .widget input[type=search],
 .shop_isle_footer_sidebar .widget_search {
-	color: #333;
+	color: #222;
 }
 
 .shop_isle_footer_sidebar {
@@ -3810,7 +3810,7 @@ Post
 
 .more-link:after {
 	padding-left: 5px;
-	color: #333;
+	color: #222;
 	content: "\00BB";
 }
 
@@ -4105,7 +4105,7 @@ Widgets
 
 .widget ul li:before {
 	padding-right: 5px;
-	color: #333;
+	color: #222;
 	content: "\00BB";
 }
 
@@ -4250,7 +4250,7 @@ Widgets
 
 .widget .icon-list li a:before {
 	padding-right: 5px;
-	color: #333;
+	color: #222;
 	content: "\00BB";
 }
 
@@ -6127,7 +6127,7 @@ WP Show Posts
 }
 
 .nivo-controlNav a.active {
-	color: #333;
+	color: #222;
 	background: #fff;
 }
 
