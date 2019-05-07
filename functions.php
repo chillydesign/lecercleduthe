@@ -357,12 +357,17 @@ function chilly_field_set_in_post($field) {
 
 
 
+ add_action('wp_enqueue_scripts', 'webfactor_styles'); // Add Theme Stylesheet
+ function webfactor_styles(){
+     // remove gutenberg css
+     wp_dequeue_style( 'wp-block-library' );
+ }
 
 
  add_action( 'wp_print_scripts', 'themeprefix_remove_password_strength', 100 );
-// CHARLES Remove password strength script
-function themeprefix_remove_password_strength() {
-	if ( wp_script_is( 'wc-password-strength-meter', 'enqueued' ) ) {
-		wp_dequeue_script( 'wc-password-strength-meter' );
-	}
-}
+ // CHARLES Remove password strength script
+ function themeprefix_remove_password_strength() {
+     if ( wp_script_is( 'wc-password-strength-meter', 'enqueued' ) ) {
+         wp_dequeue_script( 'wc-password-strength-meter' );
+     }
+ }
