@@ -704,52 +704,53 @@
 
 
 
-    // NOTE CHARLES ADD CHILLY MAPS
-    // MAP
-    if (typeof google != 'undefined'){
-        if (typeof map_location != 'undefined') {
 
 
-
-            var map_options = {
-                zoom: 16,
-                mapTypeControl: true,
-                scrollwheel: false,
-                draggable: true,
-                navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-
-
-            var location_map_container = $('#map_container');
-            location_map_container.css({
-                width : '100%',
-                height: 300
-            })
-
-            var location_map = new google.maps.Map(location_map_container.get(0), map_options);
-            var latlng = new google.maps.LatLng(  map_location.lat, map_location.lng   );
-            var infowindow = new google.maps.InfoWindow({content: ''});
-            var marker = new google.maps.Marker({
-                position: latlng,
-                map: location_map,
-                optimized: false
-            });
-
-            marker.addListener('click', function(){
-                infowindow.setContent( map_location.title );
-                infowindow.open(location_map, this);
-            })
-
-            location_map.setCenter( latlng );
-
-
-
-        };
-    }; // if google is defined
-    // END OF MAP
 
 
 
 
 })( jQuery );
+
+
+
+    // NOTE CHARLES ADD CHILLY MAPS
+function generate_chilly_map( $options ) {
+
+
+    var map_options = {
+        zoom: 15,
+        mapTypeControl: true,
+        scrollwheel: false,
+        draggable: true,
+        navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+
+    var location_map_container = jQuery( $options.element  );
+    location_map_container.css({
+        width : '100%',
+        height : 300
+    })
+
+    var location_map = new google.maps.Map(location_map_container.get(0), map_options);
+    var latlng = new google.maps.LatLng(  $options.lat, $options.lng   );
+    var infowindow = new google.maps.InfoWindow({content: ''});
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: location_map,
+        optimized: false
+    });
+
+    marker.addListener('click', function(){
+        infowindow.setContent( $options.title );
+        infowindow.open(location_map, this);
+    })
+
+    location_map.setCenter( latlng );
+
+
+
+}
+// MAP

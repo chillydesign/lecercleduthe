@@ -65,17 +65,41 @@ require get_template_directory() . '/inc/init.php';
      ), $atts );
 
 
+     $random_id =  dechex( mt_rand( 0, 999999999 )) ;
+     $map_container = 'map_container_' . $random_id;
+     $timer = 'timer_' . $random_id;
 
      $title = $attributes['title'];
      $lat = $attributes['lat'];
      $lng = $attributes['lng'];
-     $chilly_map = '<div id="map_container"></div>';
-     $chilly_map .= "<script> var map_location = {lat: ". $lat . ", lng:  ". $lng . ", title:  '" . $title . "'  }; </script>";
-     return $chilly_map;
+     $chilly_map = '<div class="map_container" id="'. $map_container  .'"></div>';
+     $script = "<script>
+     var " . $timer . "= setInterval(function() {
+         console.log('generating map');
+         if (typeof generate_chilly_map === 'function') {
+             generate_chilly_map(
+                 {
+                     element: '#" .  $map_container . "',
+                     lat: ". $lat . ",
+                     lng:  ". $lng . ",
+                     title:  '" . $title . "'
+                 }
+             );
+            clearInterval(". $timer.");
+        }
+    }, 1000);
+    </script>
 
- }
- add_shortcode( 'chilly_map', 'chilly_map' );
-// ADD MAP SHORTCODE
+
+    ";
+    $chilly_map .=   $script;
+
+
+    return $chilly_map;
+
+}
+add_shortcode( 'chilly_map', 'chilly_map' );
+
 
 
 
