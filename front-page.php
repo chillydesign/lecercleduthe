@@ -19,7 +19,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 		echo '<div class="main front-page-main" style="background-color: #' . $shop_isle_bg . '">';
 	} else {
 
-		echo '<div class="main front-page-main" style="background-color: #FFF">';
+		echo '<div class="main front-page-main">';
 
 	}
 
@@ -54,4 +54,3 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 } else {
 	include( get_page_template() );
 }// End if().
-

@@ -78,7 +78,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
             <?php if ( !is_professional_signup_form() ) : ?>
 
-                <div style="background:#f1f1f1;padding:20px;margin:20px 0 0">
+                <div style="background:#d5cebe;padding:20px;margin:20px 0 0">
                     <p>Êtes-vous un professionnel de l'hôtellerie, de la restauration ou du bien-être? Créez un compte professionnel et bénéficiez de réductions et de produits exclusifs. </p>
                     <h6><a href="?register=professional">Créer un compte professionnel</a></h6>
                 </div>

@@ -179,23 +179,23 @@ function add_professional_customer_role() {
 
 
          <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-             <label for="billing_address_1"><?php _e( 'billing_address_1', 'webfactor' ); ?> <span class="required">*</span> </label>
+             <label for="billing_address_1"><?php _e( 'Adresse - ligne 1', 'webfactor' ); ?> <span class="required">*</span> </label>
              <input type="text" required class="input-text" name="billing_address_1" id="billing_address_1" value="<?php echo $billing_address_1; ?>" />
          </p>
          <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-             <label for="billing_address_2"><?php _e( 'billing_address_2', 'webfactor' ); ?> </label>
+             <label for="billing_address_2"><?php _e( 'Adresse - ligne 2', 'webfactor' ); ?> </label>
              <input type="text"  class="input-text" name="billing_address_2" id="billing_address_2" value="<?php echo $billing_address_2; ?>" />
          </p>
          <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-             <label for="billing_city"><?php _e( 'billing_city', 'webfactor' ); ?> <span class="required">*</span> </label>
+             <label for="billing_city"><?php _e( 'Ville', 'webfactor' ); ?> <span class="required">*</span> </label>
              <input type="text" required class="input-text" name="billing_city" id="billing_city" value="<?php echo $billing_city; ?>" />
          </p>
          <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-             <label for="billing_postcode"><?php _e( 'billing_postcode', 'webfactor' ); ?> <span class="required">*</span> </label>
+             <label for="billing_postcode"><?php _e( 'Code postal', 'webfactor' ); ?> <span class="required">*</span> </label>
              <input type="text" required class="input-text" name="billing_postcode" id="billing_postcode" value="<?php echo $billing_postcode; ?>" />
          </p>
          <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-             <label for="billing_country"><?php _e( 'billing_country', 'webfactor' ); ?> <span class="required">*</span> </label>
+             <label for="billing_country"><?php _e( 'Pays', 'webfactor' ); ?> <span class="required">*</span> </label>
              <select name="billing_country" id="billing_country">
                  <?php $countries  = WC()->countries->get_countries(); ?>
                  <?php foreach ($countries as $code => $country) : ?>
