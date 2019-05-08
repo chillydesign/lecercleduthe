@@ -59,11 +59,11 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				<?php foreach ( $attributes as $attribute_name => $options ) : ?>
                     <?php
                     // CHARLES EDIT
-                     // non professional users can only see boite-de-50-sachets
+                     // non professional users can only see boite-de-50-sachets and 100-grammes
                     if ($user_is_professional == false) {
                         if ($attribute_name ==  'pa_poids') {
                             foreach ($options as $key => $option) {
-                                if ($option != 'boite-de-50-sachets' ) {
+                                if ($option != 'boite-de-50-sachets' && $option != '100-grammes'  ) {
                                     unset($options[$key]);
                                 }
                             }
