@@ -719,7 +719,7 @@ function generate_chilly_map( $options ) {
 
 
     var map_options = {
-        zoom: 15,
+        zoom: 16,
         mapTypeControl: true,
         scrollwheel: false,
         draggable: true,
