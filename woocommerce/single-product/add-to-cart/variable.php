@@ -29,15 +29,13 @@ if (  is_user_logged_in() ) {
         $user_is_professional = true;
     }
 };
-// non professional users can only see boite-de-50-sachets
+// non professional users can only see boite-de-50-sachets or 100-grammes
 // ALL POIDS ATTRIBUTE SLUGS
 // boite-de-50-sachets
 // boite-de-100-sachets-sans-enveloppe-exterieure
 // boite-de-100-sachets-avec-enveloppe-exterieure
 // boite-de-10-sachets
 // 100-grammes
-
-
 
 
 
@@ -71,12 +69,9 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
                     }
                     ?>
 
-
 					<tr>
 						<td class="label"><label for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></label></td>
 						<td class="value">
-
-
 							<?php
 								wc_dropdown_variation_attribute_options( array(
 									'options'   => $options,

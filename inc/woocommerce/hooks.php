@@ -151,7 +151,21 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_p
 // NOTE CHARLES add content to above price
 add_action( 'woocommerce_single_product_summary', 'add_content_to_above_price', 15 );
 function add_content_to_above_price(){
-    echo  '<div class="product_content">'; the_content();  echo '</div>';
+    echo  '<div class="product_content">';
+        the_content();
+    echo '</div>';
+}
+
+
+// NOTE CHARLES ADD LINK TO EXPLANATION PAGE ABOUT VARIATIONS FOR PRODS WITH MORE THAN ONE VARIATION
+add_action( 'woocommerce_single_product_summary', 'add_notice_about_variations', 20 );
+function add_notice_about_variations() {
+    global $product;
+    $variations  = $product->get_available_variations();
+    if (sizeof($variations) > 1) {
+        echo '<p><a style="color:#24d;" href="https://webfactor.ch/projets/lecercleduthe/professionnels/#packaging">Nos modes de conditionnement</a>.</p>';
+    }
+
 }
 
 
@@ -159,7 +173,7 @@ function add_content_to_above_price(){
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 
 
-
+// NOTE CHARLES ADD A LINK TO ADVERTISE HAVING A PROFESSIONAL ACCOUNT ON SINGLE PRODUCTS AND SHOP PAGES
 add_action( 'woocommerce_before_single_product', 'add_signin_alert_on_products', 10 );
 add_action( 'woocommerce_before_shop_loop', 'add_signin_alert_on_products', 10 );
 function add_signin_alert_on_products(){
