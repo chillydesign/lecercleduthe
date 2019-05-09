@@ -158,12 +158,12 @@ function add_content_to_above_price(){
 
 
 // NOTE CHARLES ADD LINK TO EXPLANATION PAGE ABOUT VARIATIONS FOR PRODS WITH MORE THAN ONE VARIATION
-add_action( 'woocommerce_single_product_summary', 'add_notice_about_variations', 20 );
+add_action( 'woocommerce_single_product_summary', 'add_notice_about_variations', 30 );
 function add_notice_about_variations() {
     global $product;
     $variations  = $product->get_available_variations();
     if (sizeof($variations) > 1) {
-        echo '<p><a style="color:#24d;" href="https://webfactor.ch/projets/lecercleduthe/professionnels/#packaging">Nos modes de conditionnement</a>.</p>';
+        echo '<p><a style="text-decoration:underline;font-style:italic;color:#555" href="https://webfactor.ch/projets/lecercleduthe/professionnels/#packaging">Nos modes de conditionnement</a>.</p>';
     }
 
 }
