@@ -145,11 +145,11 @@ function add_professional_customer_role() {
 // PROFESSIONAL SIGN UP FORM
  function is_professional_signup_form() {
      if (isset($_GET['register'])) {
-         if ($_GET['register']  == 'professional' ) {
-             return true;
+         if ($_GET['register']  == 'regular' ) {
+             return false;
          }
      }
-     return false;
+     return true;
 
  }
 
