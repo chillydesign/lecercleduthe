@@ -172,70 +172,113 @@ function add_professional_customer_role() {
          <h4>Personne de contact</h4>
 
 
-         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-             <label for="last_name"><?php _e( 'Nom', 'webfactor' ); ?> <span class="required">*</span> </label>
-             <input type="text" required class="input-text" name="last_name" id="last_name" value="<?php echo $last_name; ?>" />
-         </p>
 
-         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-             <label for="first_name"><?php _e( 'Prénom', 'webfactor' ); ?> <span class="required">*</span> </label>
-             <input type="text" required class="input-text" name="first_name" id="first_name" value="<?php echo $first_name; ?>" />
-         </p>
+         <div class="row">
+             <div class="col-sm-6">
+                 <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                     <label for="last_name"><?php _e( 'Nom', 'webfactor' ); ?> <span class="required">*</span> </label>
+                     <input type="text" required class="input-text" name="last_name" id="last_name" value="<?php echo $last_name; ?>" />
+                 </p>
+
+
+
+             </div>
+             <div class="col-sm-6">
+
+                 <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                     <label for="first_name"><?php _e( 'Prénom', 'webfactor' ); ?> <span class="required">*</span> </label>
+                     <input type="text" required class="input-text" name="first_name" id="first_name" value="<?php echo $first_name; ?>" />
+                 </p>
+             </div>
+         </div>
 
 
          <h4>Société</h4>
-         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-             <label for="billing_company"><?php _e( 'Nom de la société', 'webfactor' ); ?> <span class="required">*</span> </label>
-             <input type="text" required class="input-text" name="billing_company" id="billing_company" value="<?php echo $billing_company; ?>" />
-         </p>
 
-         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-             <label for="tva_number"><?php _e( 'Numéro de TVA', 'webfactor' ); ?> <span class="required">*</span> </label>
-             <input type="text" required class="input-text" name="tva_number" id="tva_number" value="<?php echo $tva_number; ?>" />
+         <div class="row">
+             <div class="col-sm-6">
+
+                 <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                     <label for="billing_company"><?php _e( 'Nom de la société', 'webfactor' ); ?> <span class="required">*</span> </label>
+                     <input type="text" required class="input-text" name="billing_company" id="billing_company" value="<?php echo $billing_company; ?>" />
+                 </p>
+
+             </div>
+             <div class="col-sm-6">
+                 <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                     <label for="tva_number"><?php _e( 'Numéro de TVA', 'webfactor' ); ?> <span class="required">*</span> </label>
+                     <input type="text" required class="input-text" name="tva_number" id="tva_number" value="<?php echo $tva_number; ?>" />
+                 </p>
+             </div>
+
+         </div>
+<p>
              <span><em>Si votre société n’est pas soumise à TVA veuillez nous écrire à l’adresse info@lecercleduthe.com avec les informations essentielles ainsi que l’objet de votre demande</em></span>
-         </p>
+</p>
 
 
-         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-             <label for="billing_phone"><?php _e( 'Numéro de téléphone', 'webfactor' ); ?> <span class="required">*</span> </label>
-             <input type="text" required class="input-text" name="billing_phone" id="billing_phone" value="<?php echo $billing_phone; ?>" />
-         </p>
+
+<div class="row">
+    <div class="col-sm-6">
+        <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+            <label for="billing_address_1"><?php _e( 'Adresse - ligne 1', 'webfactor' ); ?> <span class="required">*</span> </label>
+            <input type="text" required class="input-text" name="billing_address_1" id="billing_address_1" value="<?php echo $billing_address_1; ?>" />
+        </p>
+    </div>
+    <div class="col-sm-6">
+        <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+            <label for="billing_address_2"><?php _e( 'Adresse - ligne 2', 'webfactor' ); ?> </label>
+            <input type="text"  class="input-text" name="billing_address_2" id="billing_address_2" value="<?php echo $billing_address_2; ?>" />
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+            <label for="billing_city"><?php _e( 'Ville', 'webfactor' ); ?> <span class="required">*</span> </label>
+            <input type="text" required class="input-text" name="billing_city" id="billing_city" value="<?php echo $billing_city; ?>" />
+        </p>
+    </div>
+    <div class="col-sm-6">
+        <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+            <label for="billing_postcode"><?php _e( 'Code postal', 'webfactor' ); ?> <span class="required">*</span> </label>
+            <input type="text" required class="input-text" name="billing_postcode" id="billing_postcode" value="<?php echo $billing_postcode; ?>" />
+        </p>
+    </div>
+</div>
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                    <label for="billing_country"><?php _e( 'Pays', 'webfactor' ); ?> <span class="required">*</span> </label>
+                    <select name="billing_country" id="billing_country">
+                        <?php $countries  = WC()->countries->get_countries(); ?>
+                        <?php foreach ($countries as $code => $country) : ?>
+                            <?php $selected =  ($code ==  $billing_country ) ? 'selected="selected"' : ''; ?>
+                            <option <?php echo $selected; ?> value="<?php echo $code; ?>"><?php echo $country; ?></option>
+                        <?php endforeach; ?>
+
+                    </select>
+
+                </p>
+
+            </div>
+            <div class="col-sm-6">
 
 
-         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-             <label for="billing_address_1"><?php _e( 'Adresse - ligne 1', 'webfactor' ); ?> <span class="required">*</span> </label>
-             <input type="text" required class="input-text" name="billing_address_1" id="billing_address_1" value="<?php echo $billing_address_1; ?>" />
-         </p>
-         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-             <label for="billing_address_2"><?php _e( 'Adresse - ligne 2', 'webfactor' ); ?> </label>
-             <input type="text"  class="input-text" name="billing_address_2" id="billing_address_2" value="<?php echo $billing_address_2; ?>" />
-         </p>
-         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-             <label for="billing_city"><?php _e( 'Ville', 'webfactor' ); ?> <span class="required">*</span> </label>
-             <input type="text" required class="input-text" name="billing_city" id="billing_city" value="<?php echo $billing_city; ?>" />
-         </p>
-         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-             <label for="billing_postcode"><?php _e( 'Code postal', 'webfactor' ); ?> <span class="required">*</span> </label>
-             <input type="text" required class="input-text" name="billing_postcode" id="billing_postcode" value="<?php echo $billing_postcode; ?>" />
-         </p>
-         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-             <label for="billing_country"><?php _e( 'Pays', 'webfactor' ); ?> <span class="required">*</span> </label>
-             <select name="billing_country" id="billing_country">
-                 <?php $countries  = WC()->countries->get_countries(); ?>
-                 <?php foreach ($countries as $code => $country) : ?>
-                     <?php $selected =  ($code ==  $billing_country ) ? 'selected="selected"' : ''; ?>
-                     <option <?php echo $selected; ?> value="<?php echo $code; ?>"><?php echo $country; ?></option>
-                 <?php endforeach; ?>
-
-             </select>
-
-         </p>
+                         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                             <label for="billing_phone"><?php _e( 'Numéro de téléphone', 'webfactor' ); ?> <span class="required">*</span> </label>
+                             <input type="text" required class="input-text" name="billing_phone" id="billing_phone" value="<?php echo $billing_phone; ?>" />
+                         </p>
+            </div>
+        </div>
 
 
-         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-             <label for="billing_country"><?php _e( 'Remarque', 'webfactor' ); ?> </label>
-             <textarea  name="remarque" id="remarque"><?php echo $remarque; ?></textarea>
-         </p>
+
+        <br>
+        <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+            <label for="billing_country"><?php _e( 'Remarque', 'webfactor' ); ?> </label>
+            <textarea  name="remarque" id="remarque"><?php echo $remarque; ?></textarea>
+        </p>
 
 
 

@@ -23,10 +23,18 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <?php if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) : ?>
 
+
+        <div class="chilly_box">
+            <p>Êtes-vous un professionnel du milieu de l’hôtellerie, de la restauration ou du bien-être? Créez un compte professionnel Le Cercle du Thé pour bénéficier de réductions sur vos commandes, d’un accès à des produits exclusifs et d’autres avantages.</p>
+                <h6><a class="button" href="<?php echo site_url(); ?>/professionnels/">Plus sur les avantages des professionnels</a></h6>
+        </div><!--  END .chilly_box -->
+
+
+
     <div class="u-columns col2-set" id="customer_login">
 
         <div class="u-column1 col-1">
-
+    <div class="chilly_box">
             <?php if (is_professional_signup_form()): ?>
                 <h2><?php esc_html_e("Création d'un compte professionnel", 'woocommerce' ); ?></h2>
                 <p><em>Les informations renseignées sont vérifiées avant l'expédition de la première commande</em></p>
@@ -63,7 +71,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
                 <?php endif; ?>
 
                 <?php do_action( 'woocommerce_register_form' ); ?>
-
+<br>
                 <p class="woocommerce-FormRow form-row">
                     <?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
                     <button type="submit" class="woocommerce-Button button" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
@@ -78,12 +86,13 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
             <?php if ( !is_professional_signup_form() ) : ?>
 
-                <div style="background:#d5cebe;padding:20px;margin:20px 0 0">
+                <div >
                     <p>Êtes-vous un professionnel de l'hôtellerie, de la restauration ou du bien-être? Créez un compte professionnel et bénéficiez de réductions et de produits exclusifs. </p>
                     <h6><a href="?register=professional">Créer un compte professionnel</a></h6>
                 </div>
             <?php endif; ?>
 
+        </div><!--  END .chilly_box -->
         </div>
 
 
@@ -91,6 +100,8 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 
         <?php endif; ?>
+
+        <div class="chilly_box">
 
         <h2><?php esc_html_e( 'Login', 'woocommerce' ); ?></h2>
 
@@ -124,8 +135,10 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
         </form>
 
+        <div class="clearfix"></div>
 
 
+        </div><!--  END .chilly_box -->
         <?php if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) : ?>
         </div>
     </div>
