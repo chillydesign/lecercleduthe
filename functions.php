@@ -438,3 +438,9 @@ function chilly_field_set_in_post($field) {
          wp_dequeue_script( 'wc-password-strength-meter' );
      }
  }
+
+
+
+function wf_version(){
+  return '0.0.1';
+}

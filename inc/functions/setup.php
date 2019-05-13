@@ -328,9 +328,9 @@ function shop_isle_scripts() {
 
 	wp_enqueue_style( 'shop-isle-animate', $tdu . '/assets/css/vendor/animate.min.css', array( 'owl-carousel' ), '20120208', 'all' );
 
-	wp_enqueue_style( 'shop-isle-main-style', $tdu . '/assets/css/style.css', array( 'bootstrap' ), SI_VERSION, 'all' );
+	wp_enqueue_style( 'shop-isle-main-style', $tdu . '/assets/css/style.css', array( 'bootstrap' ),  wf_version(), 'all' );
 
-	wp_enqueue_style( 'shop-isle-style', get_stylesheet_uri(), '', SI_VERSION );
+	wp_enqueue_style( 'shop-isle-style', get_stylesheet_uri(), '',  wf_version() );
 
 	// Customizer Style
 	if ( is_customize_preview() ) {
