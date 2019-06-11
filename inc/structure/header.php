@@ -111,7 +111,8 @@ if ( ! function_exists( 'shop_isle_primary_navigation' ) ) {
                                         <ul class="sub-menu">
                                             <?php $cat_args = array(
                                                 'taxonomy' => 'product_cat' ,
-                                                 'title_li' => '',
+												 'title_li' => '',
+												 'orderby' => 'menu_order',
                                                  'hide_title_if_empty' => false
                                              ); ?>
                                             <?php wp_list_categories($cat_args  ); ?>

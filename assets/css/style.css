@@ -6742,3 +6742,7 @@ body mark, body .mark {
     margin: 3px 3px 3px 0;
     display: inline-block;
 }
+
+article img {
+	margin-bottom: 20px;
+}
