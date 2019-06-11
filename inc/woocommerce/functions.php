@@ -238,7 +238,7 @@ function shop_isle_thumbnail_columns() {
  * @since  1.0.0
  */
 function shop_isle_products_per_page() {
-	return intval( apply_filters( 'shop_isle_products_per_page', 12 ) );
+	return intval( apply_filters( 'shop_isle_products_per_page', 120 ) );
 }
 
 /**
