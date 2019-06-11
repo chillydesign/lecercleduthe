@@ -113,7 +113,7 @@ if ( ! function_exists( 'shop_isle_primary_navigation' ) ) {
                                                 'taxonomy' => 'product_cat' ,
 												 'title_li' => '',
 												 'orderby' => 'menu_order',
-                                                 'hide_title_if_empty' => false
+                                                 'hide_title_if_empty' => true
                                              ); ?>
                                             <?php wp_list_categories($cat_args  ); ?>
                                         </ul>
