@@ -85,7 +85,7 @@ add_action( 'woocommerce_after_shop_loop_item_title', 'shop_isle_outofstock_noti
 
 add_filter( 'woocommerce_format_price_range', 'chilly_price_html_new', 100, 3 );
 function chilly_price_html_new( $price, $from, $to ){
-    return  sprintf( _x( 'Starting From %1$s', 'Price range: from-to', 'woocommerce' ), is_numeric( $from ) ? wc_price( $from ) : $from );
+    return  sprintf( _x( 'à partir de %1$s', 'Price range: from-to', 'woocommerce' ), is_numeric( $from ) ? wc_price( $from ) : $from );
 }
 
 
