@@ -6750,3 +6750,7 @@ article img {
 ul#shipping_method {
     padding-left: 0;
 }
+tr.woocommerce-cart-form__cart-item.cart_item td.product-price del {
+    display: none;
+    height: 0;
+}

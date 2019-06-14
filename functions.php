@@ -474,7 +474,7 @@ function chilly_field_set_in_post($field) {
 
 
 function wf_version(){
-  return '0.0.2';
+  return '0.0.3';
 }
 
 
