@@ -435,6 +435,27 @@ function chilly_field_set_in_post($field) {
 
 
 
+ add_filter( 'get_terms', 'hide_prof_cat_on_shop', 10, 3 );
+ function hide_prof_cat_on_shop( $terms, $taxonomies, $args ) {
+    // hide professionnels product category on home page
+    $new_terms  = array();
+    $hide_category  = array( 'professionnels' ); 
+    // slugs of the category you don't want to display on the shop page
+
+      // if a product category and on the shop page
+    if ( in_array( 'product_cat', $taxonomies ) && !is_admin() && is_shop() ) {
+        foreach ( $terms as $key => $term ) {
+        if ( ! in_array( $term->slug, $hide_category ) ) { 
+            $new_terms[] = $term;
+        }
+        }
+        $terms = $new_terms;
+    }
+   return $terms;
+ }
+
+
+
  add_action('wp_enqueue_scripts', 'webfactor_styles'); // Add Theme Stylesheet
  function webfactor_styles(){
      // remove gutenberg css
