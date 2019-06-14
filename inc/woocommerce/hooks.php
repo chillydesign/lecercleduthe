@@ -82,6 +82,14 @@ remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_show_prod
 add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 6 );
 add_action( 'woocommerce_after_shop_loop_item_title', 'shop_isle_outofstock_notify_on_archives', 10 );
 
+
+add_filter( 'woocommerce_format_price_range', 'chilly_price_html_new', 100, 2 );
+function chilly_price_html_new( $price, $from, $to ){
+    return  sprintf( _x( 'Starting From %1$s', 'Price range: from-to', 'woocommerce' ), is_numeric( $from ) ? wc_price( $from ) : $from );
+}
+
+
+
 /* add products slider */
 // NOTE CHARLES DONT ADD PRODUCT SLIDE ON SINGLE PAGE
 // add_action( 'woocommerce_after_single_product', 'shop_isle_products_slider_on_single_page', 10, 0 );
