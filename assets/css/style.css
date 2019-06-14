@@ -6746,3 +6746,7 @@ body mark, body .mark {
 article img {
 	margin-bottom: 20px;
 }
+
+ul#shipping_method {
+    padding-left: 0;
+}
