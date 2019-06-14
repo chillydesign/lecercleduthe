@@ -101,6 +101,17 @@ require get_template_directory() . '/inc/init.php';
 add_shortcode( 'chilly_map', 'chilly_map' );
 
 
+function is_professional_customer_logged_in() {
+    $user_is_professional = false;
+    if (  is_user_logged_in() ) {
+        $user = wp_get_current_user();
+        if ( in_array( 'professional_customer', (array) $user->roles ) ) {
+            $user_is_professional = true;
+        }
+    };
+
+    return $user_is_professional;
+}
 
 
 
@@ -442,5 +453,5 @@ function chilly_field_set_in_post($field) {
 
 
 function wf_version(){
-  return '0.0.1';
+  return '0.0.2';
 }

@@ -22,13 +22,9 @@ global $product;
 
 
 // CHARLES  EDIT
-$user_is_professional = false;
-if (  is_user_logged_in() ) {
-    $user = wp_get_current_user();
-    if ( in_array( 'professional_customer', (array) $user->roles ) ) {
-        $user_is_professional = true;
-    }
-};
+$user_is_professional = is_professional_customer_logged_in();
+
+
 // non professional users can only see boite-de-50-sachets or 100-grammes
 // ALL POIDS ATTRIBUTE SLUGS
 // boite-de-50-sachets
