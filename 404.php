@@ -6,7 +6,14 @@
  * @subpackage Shop Isle
  */
 
-get_header(); ?>
+get_header();
+
+
+
+add_weight_to_hundred_prods();
+
+
+ ?>
 	<!-- Wrapper start -->
 	<div class="main">
 
