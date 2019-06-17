@@ -683,6 +683,11 @@
 	);
 
 
+		// CHARLES remove opening of weird scroll box including terms
+		// instead let link redirect to actual terms conditions page
+		$( "a.woocommerce-terms-and-conditions-link" ).unbind( "click" );
+
+
     // NOTE CHARLES do modal popup when add to cart
     if (typeof added_to_cart_now != 'undefined') {
         $.magnificPopup.open({

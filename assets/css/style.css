@@ -6754,3 +6754,21 @@ tr.woocommerce-cart-form__cart-item.cart_item td.product-price del {
     display: none;
     height: 0;
 }
+
+
+/*CHARLES EDIT IF YOU WANT TERMS AND CONDITIONS TO BE A FAKE POPUP*/
+/*body .woocommerce-terms-and-conditions {
+	box-shadow: 0 0 20px 1000px rgba(0,0,0,0.5);
+    top: 30%;
+    max-height: 300px !important;
+    overflow: scroll !important;
+    display: block;
+    position: fixed;
+    background: white;
+    left: 10%;
+    right: 10%;
+    z-index: 100000;
+    padding: 30px;   
+}
+
+ */
