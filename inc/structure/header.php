@@ -110,12 +110,25 @@ if ( ! function_exists( 'shop_isle_primary_navigation' ) ) {
                                 	<?php if (is_professional_customer_logged_in()) : ?>
 									<?php $prof_shop_page_url = site_url() . '/product-category/professionnels/'; ?>
     								 <li class="">
-                                        <a href="<?php echo $prof_shop_page_url; ?>">Nos thés en ligne</a>
+                                        <a href="<?php echo $prof_shop_page_url; ?>">Notre sélection professionelle</a>
                                     </li>
+																		<li class="menu-item-has-children">
+																				<a href="<?php echo $shop_page_url; ?>">Nos thés en vrac</a>
+																				<ul class="sub-menu">
+																						<?php $cat_args = array(
+																								'taxonomy' => 'product_cat' ,
+												 'title_li' => '',
+												 'exclude' => array(41), /// hide prof category
+												 'orderby' => 'menu_order',
+																								 'hide_title_if_empty' => true
+																						 ); ?>
+																						<?php wp_list_categories($cat_args  ); ?>
+																				</ul>
+																		</li>
 									<?php else:  // not professional, or not logged in ?>
 
 
-                                	
+
                                     <li class="menu-item-has-children">
                                         <a href="<?php echo $shop_page_url; ?>">Nos thés en ligne</a>
                                         <ul class="sub-menu">
@@ -132,7 +145,7 @@ if ( ! function_exists( 'shop_isle_primary_navigation' ) ) {
 
                                     <?php endif; // end if not profess or not logged in ?>
 
-                                    
+
                                 <?php
 
                                 // NOTE CHARLES ADD SHOP CATEGORIES TO HEADER NAV
@@ -151,7 +164,7 @@ if ( ! function_exists( 'shop_isle_primary_navigation' ) ) {
                                         'walker'          => ''
                                     )
                                 );
-                                ?> 
+                                ?>
                                 </ul>
                             </div>
                         </div>
