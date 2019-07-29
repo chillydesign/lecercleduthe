@@ -58,7 +58,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
                         if ($attribute_name ==  'pa_poids') {
                             foreach ($options as $key => $option) {
                                 if ($option != 'boite-de-20-sachets-de-thes' && $option != 'the-en-vrac-100g'  ) {
-                                    unset($options[$key]);
+                                    unset($options[$key]); 
                                 }
                             }
                         }
