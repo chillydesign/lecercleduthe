@@ -118,7 +118,7 @@ if ( ! function_exists( 'shop_isle_primary_navigation' ) ) {
 																						<?php $cat_args = array(
 																								'taxonomy' => 'product_cat' ,
 												 'title_li' => '',
-												 'exclude' => array(41,49), /// hide prof category
+												 'exclude' => array(41,49), /// hide prof category and boite de thé category
 												 'orderby' => 'menu_order',
 																								 'hide_title_if_empty' => true
 																						 ); ?>
