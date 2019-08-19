@@ -439,13 +439,13 @@ function chilly_field_set_in_post($field) {
  function hide_prof_cat_on_shop( $terms, $taxonomies, $args ) {
     // hide professionnels product category on home page
     $new_terms  = array();
-    $hide_category  = array( 'professionnels' ); 
+    $hide_category  = array( 'professionnels' );
     // slugs of the category you don't want to display on the shop page
 
       // if a product category and on the shop page
     if ( in_array( 'product_cat', $taxonomies ) && !is_admin() && is_shop() ) {
         foreach ( $terms as $key => $term ) {
-        if ( ! in_array( $term->slug, $hide_category ) ) { 
+        if ( ! in_array( $term->slug, $hide_category ) ) {
             $new_terms[] = $term;
         }
         }
@@ -474,7 +474,7 @@ function chilly_field_set_in_post($field) {
 
 
 function wf_version(){
-  return '0.0.3';
+  return '0.0.4';
 }
 
 
