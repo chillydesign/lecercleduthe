@@ -472,6 +472,12 @@ function chilly_field_set_in_post($field) {
  }
 
 
+ add_filter('body_class','my_class_names');
+ function my_class_names($classes) {
+     $classes[] = get_user_role();
+     return $classes;
+ }
+
 
 function wf_version(){
   return '0.0.4';
