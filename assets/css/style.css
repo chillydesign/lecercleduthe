@@ -2466,6 +2466,19 @@ body.admin-bar .navbar {
 	line-height: 38px;
 }
 
+li.pro_only {
+    display: none;
+}
+
+.role-professional_customer li.pro_only {
+    display: inherit;
+}
+
+.role-professional_customer li.hide_pro {
+    display: none;
+}
+
+
 
 /* -------------------------------------------------------------------
 Home Section
