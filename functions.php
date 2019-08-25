@@ -472,12 +472,13 @@ function chilly_field_set_in_post($field) {
  }
 
 
- add_filter('body_class','my_class_names');
- function my_class_names($classes) {
-     $classes[] = get_user_role();
-     return $classes;
+ add_filter('body_class','add_role_to_body');
+ function add_role_to_body($classes) {
+ $current_user = new WP_User(get_current_user_id());
+ $user_role = array_shift($current_user->roles);
+ $classes[] = 'role-'. $user_role;
+ return $classes;
  }
-
 
 function wf_version(){
   return '0.0.4';
