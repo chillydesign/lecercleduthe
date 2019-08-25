@@ -451,6 +451,23 @@ function chilly_field_set_in_post($field) {
         }
         $terms = $new_terms;
     }
+
+    // remove categories based on their parent category if get variable set.
+    if (isset($_GET['supercat'])) {
+        $new_terms = array();
+        $supercat = $_GET['supercat'];
+        if ($supercat == 'blah') {
+            foreach ( $terms as $key => $term ) {
+                if ( ! in_array( $term->slug,  array('pu-erh')  ) ) {
+                    $new_terms[] = $term;
+                }
+                }
+        }
+        $terms = $new_terms; 
+    }
+
+
+
    return $terms;
  }
 
