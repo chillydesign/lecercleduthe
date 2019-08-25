@@ -106,7 +106,7 @@ if ( ! function_exists( 'shop_isle_primary_navigation' ) ) {
 						<div class="collapse navbar-collapse" id="custom-collapse">
                             <div class="nav navbar-nav navbar-right">
                                 <ul>
-
+		<?php if (false): ?>
                                 	<?php if (is_professional_customer_logged_in()) : ?>
 									<?php $prof_shop_page_url = site_url() . '/product-category/professionnels/'; ?>
     								 <li class="">
@@ -144,6 +144,7 @@ if ( ! function_exists( 'shop_isle_primary_navigation' ) ) {
                                     </li>
 
                                     <?php endif; // end if not profess or not logged in ?>
+                                    <?php endif; // end if false  dont show for now,  ?>
 
 
                                 <?php
