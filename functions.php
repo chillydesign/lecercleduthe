@@ -459,7 +459,7 @@ function chilly_field_set_in_post($field) {
             $supercat = $_GET['the'];
             if ($supercat == 'vrac') {
                 foreach ( $terms as $key => $term ) {
-                    if ( ! in_array( $term->ID,  $non_vrac_teas  ) ) {
+                    if ( ! in_array( $term->term_id,  $non_vrac_teas  ) ) {
                         $new_terms[] = $term;
                     }
                 }
