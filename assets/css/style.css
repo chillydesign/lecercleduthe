@@ -2466,6 +2466,12 @@ body.admin-bar .navbar {
 	line-height: 38px;
 }
 
+ul.sub-menu ul.sub-menu {
+    height: auto;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
 li.pro_only, .pro_only {
     display: none;
 }
