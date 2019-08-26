@@ -2466,11 +2466,11 @@ body.admin-bar .navbar {
 	line-height: 38px;
 }
 
-li.pro_only {
+li.pro_only, .pro_only {
     display: none;
 }
 
-.role-professional_customer li.pro_only {
+.role-professional_customer li.pro_only, .role-professional_customer .pro_only {
     display: inherit;
 }
 
