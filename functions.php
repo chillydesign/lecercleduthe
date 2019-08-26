@@ -464,7 +464,7 @@ function chilly_field_set_in_post($field) {
                     }
                 }
             }
-            $terms = $new_terms; 
+            $terms = $new_terms;
         }
 
     }
@@ -502,7 +502,7 @@ function chilly_field_set_in_post($field) {
  }
 
 function wf_version(){
-  return '0.0.4';
+  return '0.0.5';
 }
 
 
