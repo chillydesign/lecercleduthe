@@ -96,7 +96,18 @@ if ( ! function_exists( 'shop_isle_footer_copyright_and_socials' ) ) {
 
 						$shop_isle_site_info_hide = apply_filters( 'shop_isle_footer_socials_filter', get_theme_mod( 'shop_isle_site_info_hide' ) );
 					echo '<p class="shop-isle-poweredby-box"><a class="shop-isle-poweredby" href="https://webfactor.ch/" rel="nofollow">Website by Webfactor </a></p>';
-					echo '</div>';
+					echo '</div>
+
+					<div class="popup-legal">
+						<div class="popup-content">
+						<h3>Conditions générales de vente de TEA DC SARL</h3>
+							' . get_the_content(null, false, 1674) . '
+						</div>
+					</div>
+
+
+
+					';
 
 					/* Socials icons */
                     // NOTE CHARLES REMOVE SOCIAL ICONS FROM FOOTER
