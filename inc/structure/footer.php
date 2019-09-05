@@ -91,7 +91,7 @@ if ( ! function_exists( 'shop_isle_footer_copyright_and_socials' ) ) {
 					$shop_isle_copyright = ! empty( $shop_isle_copyright ) ? $shop_isle_copyright : '';
 					echo '<div class="col-sm-6">';
 					if ( ! empty( $shop_isle_copyright ) || is_customize_preview() ) :
-						echo '<p class="copyright font-alt"> &copy; ' .  date('Y') . ' ' . $shop_isle_copyright . '</p>';
+						echo '<p class="copyright font-alt"> &copy; ' .  date('Y') . ' ' . $shop_isle_copyright . ' | <a href="<?php echo get_home_url(); ?>/conditions-generales-de-vente">Mentions légales</a></p>';
 						endif;
 
 						$shop_isle_site_info_hide = apply_filters( 'shop_isle_footer_socials_filter', get_theme_mod( 'shop_isle_site_info_hide' ) );
