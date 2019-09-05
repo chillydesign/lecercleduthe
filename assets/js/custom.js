@@ -450,16 +450,17 @@
 					$('#popup_legal_inner_text').html($terms_content);
 
 				};
-				$terms_link.unbind('click').on('click', function (e) {
+
+				$(document.body).on('click', 'a.woocommerce-terms-and-conditions-link', function (e) {
 					console.log('heree');
 					// e.preventDefault();
 					$('#popup_legal').show();
-				}).on('hover', function (e) {
-					console.log('hovering');
 				});
 
 
-			}, 1000);
+
+
+			}, 1500);
 
 
 
