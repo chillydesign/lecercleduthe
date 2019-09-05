@@ -6800,6 +6800,7 @@ body.tax-product_cat section.woocommerce-page-title.page-header-module.module.bg
 
 /*CHARLES EDIT IF YOU WANT TERMS AND CONDITIONS TO BE A FAKE POPUP*/
 body .woocommerce-terms-and-conditions {
+}
 
 
 
@@ -6827,7 +6828,7 @@ body .woocommerce-terms-and-conditions {
     z-index: 100000;
     padding: 30px;
 }
-}
+
 #popup_legal_inner {
 	padding: 30px;
 	background:white;
