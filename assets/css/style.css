@@ -2522,6 +2522,11 @@ Home Section
 	font-weight: 400;
 	letter-spacing: 10px;
 }
+div.hs-title-size-4.font-alt.mb-30 {
+    line-height: 1.4;
+    font-family: 'Playfair Display', georgia, "Times New Roman", sans-serif;
+    font-size: 40px;
+}
 
 /* Video */
 .module-video {
