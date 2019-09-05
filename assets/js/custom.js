@@ -458,6 +458,12 @@
 				});
 
 
+				$(document.body).on('click', '#popup_legal_inner', function (e) {
+					$('#popup_legal').hide();
+				});
+
+
+
 
 
 			}, 1500);

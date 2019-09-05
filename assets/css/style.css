@@ -6799,7 +6799,22 @@ body.tax-product_cat section.woocommerce-page-title.page-header-module.module.bg
 }
 
 /*CHARLES EDIT IF YOU WANT TERMS AND CONDITIONS TO BE A FAKE POPUP*/
-/*body .woocommerce-terms-and-conditions {
+body .woocommerce-terms-and-conditions {
+
+
+
+
+ body .woocommerce-terms-and-conditions {
+		display: none !important;
+		visibility: hidden !important;
+		height : 0 !important;
+		max-height: 0 !important;
+		overflow: auto;
+
+ }
+
+
+#popup_legal {
 	box-shadow: 0 0 20px 1000px rgba(0,0,0,0.5);
     top: 30%;
     max-height: 300px !important;
@@ -6812,14 +6827,8 @@ body.tax-product_cat section.woocommerce-page-title.page-header-module.module.bg
     z-index: 100000;
     padding: 30px;
 }
-
- */
-
- body .woocommerce-terms-and-conditions {
-		display: none !important;
-		visibility: hidden !important;
-		height : 0 !important;
-		max-height: 0 !important;
-		overflow: auto;
-
- }
+}
+#popup_legal_inner {
+	padding: 30px;
+	background:white;
+}
