@@ -6556,6 +6556,14 @@ WP Show Posts
 }
 
 @media (max-width: 768px) {
+	.navbar-custom .navbar-cart {
+    top: 60px!important;
+    right: 27px!important;
+    position: absolute!important;
+    width: 90px!important;
+    padding: 5px 0 5px 5px!important;
+}
+a.custom-logo-link img {max-width: 220px!important;}
 	body.admin-bar .navbar {
 		margin-top: 45px;
 	}
@@ -6608,6 +6616,11 @@ WP Show Posts
 }
 
 @media (max-width: 600px) {
+	.navbar-custom .navbar-cart {
+		top: 50px!important;
+}
+a.custom-logo-link img {max-width: 170px!important;}
+
 	body.admin-bar .navbar.navbar-scroll-point {
 		top: 0;
 	}
