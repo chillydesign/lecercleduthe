@@ -440,7 +440,7 @@
 
 			// CHARLES remove opening of weird scroll box including terms
 			// instead open its content in a lightbox
-			var $terms_link = $(".woocommerce-terms-and-conditions-checkbox-text");
+			var $terms_link = $("a.woocommerce-terms-and-conditions-link");
 			var $terms_text = $('.woocommerce-terms-and-conditions');
 			if ($terms_text.length > 0) {
 				console.log('here');
@@ -449,7 +449,7 @@
 				$('#popup_legal_inner_text').html($terms_content);
 
 			};
-			$terms_link.on('mousedown', function (e) {
+			$terms_link.on('hover', function (e) {
 				console.log('heree');
 				// e.preventDefault();
 				$('#popup_legal').show();
