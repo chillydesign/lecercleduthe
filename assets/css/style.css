@@ -2825,6 +2825,8 @@ Sections
 
 .page-header-module .module-subtitle {
 	margin-top: 20px;
+  font-weight: bold;
+  text-shadow: 5px 5px 16px rgba(0,0,0,0.8);
 }
 
 .no-results .page-header {
