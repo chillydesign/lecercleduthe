@@ -368,7 +368,7 @@ function shop_isle_scripts() {
 			'flexslider',
 			'jquery-mb-YTPlayer',
 		),
-		'20190617',
+		'20190805',
 		true
 	);
 
