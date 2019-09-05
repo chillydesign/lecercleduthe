@@ -434,6 +434,32 @@
 				}
 			);
 
+
+
+
+
+			// CHARLES remove opening of weird scroll box including terms
+			// instead open its content in a lightbox
+			var $terms_link = $(".woocommerce-terms-and-conditions-checkbox-text");
+			var $terms_text = $('.woocommerce-terms-and-conditions');
+			if ($terms_text.length > 0) {
+				console.log('here');
+				var $terms_content = $terms_text[0].innerHTML;
+				console.log($terms_content);
+				$('#popup_legal_inner_text').html($terms_content);
+
+			};
+			$terms_link.on('mousedown', function (e) {
+				console.log('heree');
+				// e.preventDefault();
+				$('#popup_legal').show();
+			});
+
+
+
+
+
+
 			/* ---------------------------------------------- /*
 			* Scroll top
 			/* ---------------------------------------------- */
@@ -681,25 +707,6 @@
 			}
 		}
 	);
-
-
-	// CHARLES remove opening of weird scroll box including terms
-	// instead open its content in a lightbox
-	var $terms_link = $(".woocommerce-terms-and-conditions-checkbox-text");
-	var $terms_text = $('.woocommerce-terms-and-conditions');
-	if ($terms_text.length > 0) {
-		console.log('here');
-		var $terms_content = $terms_text[0].innerHTML;
-		console.log($terms_content);
-		$('#popup_legal_inner_text').html($terms_content);
-
-	};
-	$terms_link.on('mousedown', function (e) {
-		console.log('heree');
-		// e.preventDefault();
-		$('#popup_legal').show();
-	});
-
 
 
 
