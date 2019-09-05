@@ -5205,7 +5205,11 @@ WR Mega Menu
 		padding: 15px !important;
 	}
 }
-
+@media screen and (max-width: 550px) {
+	span.hideonmobile {
+    display: none!important;
+}
+}
 
 /* -------------------------------------------------------------------
 Mega menu Plugin
