@@ -6799,3 +6799,12 @@ body.tax-product_cat section.woocommerce-page-title.page-header-module.module.bg
 }
 
  */
+
+ body .woocommerce-terms-and-conditions {
+		display: none !important;
+		visibility: hidden !important;
+		height : 0 !important;
+		max-height: 0 !important;
+		overflow: auto;
+
+ }

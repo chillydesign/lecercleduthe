@@ -687,11 +687,13 @@
 	// instead open its content in a lightbox
 	var $terms_link = $("a.woocommerce-terms-and-conditions-link");
 	var $terms_text = $('.woocommerce-terms-and-conditions');
-	if ($terms_text) {
+	if ($terms_text.length > 0) {
 		var $terms_content = $terms_text[0].innerHTML;
 		$('#popup_legal_inner_text').html($terms_content);
+
+
 	};
-	$terms_link.unbind('click').on('click', function (e) {
+	$terms_link.on('mousedown', function (e) {
 		e.preventDefault();
 		$('#popup_legal').show();
 	});
