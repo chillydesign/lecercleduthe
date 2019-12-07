@@ -515,3 +515,15 @@ function wf_version(){
 // endforeach;
 // echo 'DONE';
 // }
+
+
+//custom function to override default sort by category
+ function custom_default_catalog_orderby() {
+//choose categories where default sorting will be changed
+ if (is_product_category( array( 'paquets-cadeaux' ))) {
+ return 'menu_order'; // sort by latest
+}else{
+return 'title'; // sort by popularity as the default
+ } // end if statement
+ } //end function
+add_filter( 'woocommerce_default_catalog_orderby', 'custom_default_catalog_orderby' ); //add the filter
