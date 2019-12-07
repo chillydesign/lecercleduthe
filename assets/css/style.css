@@ -2662,6 +2662,10 @@ Sections
 	margin: 0;
 }
 
+.hero-slider .slides li {
+    min-height: 500px!important;
+	}
+
 /* Position the show-hide crayon on the left side for all sections */
 .home-banners .customize-partial-edit-shortcut .customize-partial-edit-shortcut-button,
 #latest .customize-partial-edit-shortcut .customize-partial-edit-shortcut-button,
@@ -5259,7 +5263,7 @@ Mega menu Plugin
 Responsive Media Querries
 ------------------------------------------------------------------- */
 
-@media (min-width: 769px) { 
+@media (min-width: 769px) {
 	body.home .navbar-transparent {
 		padding-top: 15px;
 		padding-bottom: 15px;
