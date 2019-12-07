@@ -5259,7 +5259,7 @@ Mega menu Plugin
 Responsive Media Querries
 ------------------------------------------------------------------- */
 
-@media (min-width: 769px) {
+@media (min-width: 769px), (min-height: 769px) {
 	body.home .navbar-transparent {
 		padding-top: 15px;
 		padding-bottom: 15px;
@@ -5432,7 +5432,7 @@ Responsive Media Querries
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-height: 768px) {
 	.shop_isle_banners_section .widget {
 		width: 100%;
 	}
