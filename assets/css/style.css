@@ -6843,3 +6843,8 @@ body .woocommerce-terms-and-conditions {
 	background:white;
 	cursor: pointer;
 }
+
+
+@media screen and (max-width: 783px) {
+	ul.flex-control-nav.flex-control-paging{display: none}
+}
