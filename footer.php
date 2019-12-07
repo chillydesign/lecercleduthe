@@ -27,7 +27,6 @@
 <?php if ( is_checkout() ): ?>
 <div id="popup_legal" style="display:none">
 	<div id="popup_legal_inner">
-		<h3>Conditions générales de vente de TEA DC SARL</h3>
 		<div id="popup_legal_inner_text">
 		</div>
 	</div>
