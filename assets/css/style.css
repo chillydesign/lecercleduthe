@@ -5432,7 +5432,7 @@ Responsive Media Querries
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-height: 768px) {
 	.shop_isle_banners_section .widget {
 		width: 100%;
 	}
