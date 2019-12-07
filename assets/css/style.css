@@ -5259,7 +5259,7 @@ Mega menu Plugin
 Responsive Media Querries
 ------------------------------------------------------------------- */
 
-@media (min-width: 769px) {
+@media (min-width: 769px) { 
 	body.home .navbar-transparent {
 		padding-top: 15px;
 		padding-bottom: 15px;
