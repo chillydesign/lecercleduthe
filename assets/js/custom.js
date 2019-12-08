@@ -234,6 +234,7 @@
 					var setTimeoutConst;
 					$('.navbar-custom .navbar-nav  li, .navbar-custom li  ul  li').on('click',
 						function () {
+							event.preventDefault();
 							var $this = $(this);
 							setTimeoutConst = setTimeout(
 								function () {
