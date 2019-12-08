@@ -5921,6 +5921,8 @@ Responsive Media Querries
         width: 44px;
         vertical-align: middle;
         cursor: pointer;
+        position: relative;
+        top: -10px;
     }
 
     .navbar-header {
@@ -7289,7 +7291,7 @@ WP Show Posts
 
 @media (max-width: 600px) {
     .navbar-custom .navbar-cart {
-        top: 50px !important;
+        top: 40px !important;
     }
 
     a.custom-logo-link img {
