@@ -231,8 +231,30 @@
 				console.log('hoverdropdown');
 				$('li.has_children > a').on('click', function (e) {
 					console.log('lihaschildren a');
+					console.log($(this));
 					e.preventDefault();
 				});
+
+
+
+
+				var navLi = jQuery('.navbar-nav li');
+
+				navLi.each(function () {
+					if (jQuery(this).find('ul').length > 0 && !jQuery(this).hasClass('has_children')) {
+						jQuery(this).addClass('has_children');
+						jQuery(this).find('a').first().after('<p class="dropdownmenu"></p>');
+					}
+				});
+				jQuery('.dropdownmenu').click(function () {
+					if (jQuery(this).parent('li').hasClass('this-open')) {
+						jQuery(this).parent('li').removeClass('this-open');
+					} else {
+						jQuery(this).parent('li').addClass('this-open');
+					}
+				});
+
+
 
 				$('.navbar-custom .navbar-nav  li.has_children').on('click', function (e) {
 					console.log('lishaschildren');
@@ -522,25 +544,25 @@
 			* Dropdown mennu on tablet
 			/* ---------------------------------------------- */
 
-			var $menuBtnChildren = $('.menu-item-has-children'),
-				submenuOpenClass = 'open',
-				$thisParent,
-				$menuWrap = $('.header-menu-wrap');
-			$menuBtnChildren.click(
-				function (event) {
-					if (mobileTest && !$(this).hasClass(submenuOpenClass) && window.innerWidth > 768) {
-						$thisParent = $(this).parent('ul').parent('li');
-						if ($thisParent.hasClass(submenuOpenClass)) {
-							$thisParent.find('.' + submenuOpenClass).removeClass(submenuOpenClass);
-						} else {
-							$menuWrap.find('.' + submenuOpenClass).removeClass(submenuOpenClass);
-						}
-						$(this).addClass(submenuOpenClass);
-						event.stopPropagation();
-						return false;
-					}
-				}
-			);
+			// var $menuBtnChildren = $('.menu-item-has-children'),
+			// 	submenuOpenClass = 'open',
+			// 	$thisParent,
+			// 	$menuWrap = $('.header-menu-wrap');
+			// $menuBtnChildren.click(
+			// 	function (event) {
+			// 		if (mobileTest && !$(this).hasClass(submenuOpenClass) && window.innerWidth > 768) {
+			// 			$thisParent = $(this).parent('ul').parent('li');
+			// 			if ($thisParent.hasClass(submenuOpenClass)) {
+			// 				$thisParent.find('.' + submenuOpenClass).removeClass(submenuOpenClass);
+			// 			} else {
+			// 				$menuWrap.find('.' + submenuOpenClass).removeClass(submenuOpenClass);
+			// 			}
+			// 			$(this).addClass(submenuOpenClass);
+			// 			event.stopPropagation();
+			// 			return false;
+			// 		}
+			// 	}
+			// );
 
 			$('html,body,.main,.navbar-custom,.bottom-page-wrap').click(
 				function () {
