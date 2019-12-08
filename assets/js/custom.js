@@ -510,9 +510,9 @@
 			$(window).scroll(
 				function () {
 					if ($(this).scrollTop() > 100) {
-						$('.scroll-up').fadeIn();
+						$('.scroll-up').show();
 					} else {
-						$('.scroll-up').fadeOut();
+						$('.scroll-up').hide();
 					}
 				}
 			);
