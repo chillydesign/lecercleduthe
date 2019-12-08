@@ -3328,10 +3328,19 @@ Sections
 
 .dropdownmenu::before {
     right: 0;
-
     position: absolute;
-
     top: 30%;
+}
+
+@media screen and (min-width: 768px) {
+    .dropdownmenu::before {
+        top: 0;
+        right: 0
+    }
+
+    li li .dropdownmenu::before {
+        right: 10px;
+    }
 }
 
 .navbar-custom li.has_children.this-open>.dropdownmenu:before {
