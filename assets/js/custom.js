@@ -233,39 +233,22 @@
 					var $this = jQuery(this);
 					var $parent = $this.parent();
 					if ($parent.hasClass('has_children')) {
-						console.log('lihaschildren a');
+
 						e.preventDefault();
 
-						// console.log($parent);
-						// console.log($parent.hasClass('open'));
 
 						var $opened = $parent.hasClass('open');
 						//	$('li.has_children').removeClass('open');
 						if ($opened) {
 							// closed by line above
 						} else {
-							console.log('opening');
+
 							setTimeout(() => $parent.addClass('open'), 100);
 						}
 					}
 
 				});
 
-
-
-
-
-				// $('.navbar-custom .navbar-nav  li.has_children').on('click', function (e) {
-				// 	console.log('lishaschildren');
-				// 	var $this = $(this);
-				// 	var $opened = $this.hasClass('open');
-				// 	$('li.has_children').removeClass('open');
-				// 	if ($opened) {
-				// 		// closed by line above
-				// 	} else {
-				// 		$this.addClass('open');
-				// 	}
-				// });
 
 
 			}
