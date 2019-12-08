@@ -232,17 +232,18 @@
 					$('.navbar-custom .navbar-nav  li, .navbar-custom li.dropdown  ul  li').removeClass('open');
 					var delay = 0;
 					var setTimeoutConst;
-					// $('.navbar-custom .navbar-nav  li, .navbar-custom li  ul  li').hover(  /// CHARLES CHANGED 
-					$('.navbar-custom .navbar-nav  li a, .navbar-custom li  ul  li a').click(  /// CHARLES CHANGED 
+					// $('.navbar-custom .navbar-nav  li, .navbar-custom li  ul  li').hover(
+					$('.navbar-custom .navbar-nav  li > a, .navbar-custom li  ul  li  > a').click(  /// CHARLES CHANGED 
 						function (e) {
 							e.preventDefault();
 							var $this = $(this);
+							var $parent = $this.parent();
 							setTimeoutConst = setTimeout(
 								function () {
 									// $this.addClass('open');
-									$this.parent().addClass('open');
+									$parent.addClass('open');
 									// $this.find('.dropdown-toggle').addClass('disabled');
-									$this.parent().find('.dropdown-toggle').addClass('disabled');
+									$parent.find('.dropdown-toggle').addClass('disabled');
 								}, delay
 							);
 						},
