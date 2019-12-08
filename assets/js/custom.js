@@ -228,11 +228,14 @@
 			/* ---------------------------------------------- */
 
 			function hoverDropdown(width, mobileTest) {
+				console.log('hoverdropdown');
 				$('li.has_children > a').on('click', function (e) {
+					console.log('lihaschildren a');
 					e.preventDefault();
 				});
 
 				$('.navbar-custom .navbar-nav  li.has_children').on('click', function (e) {
+					console.log('lishaschildren');
 					var $this = $(this);
 					var $opened = $this.hasClass('open');
 					$('li.has_children').removeClass('open');
