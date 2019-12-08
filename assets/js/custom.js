@@ -236,7 +236,7 @@
 						console.log('lihaschildren a');
 						e.preventDefault();
 
-						console.log($parent);
+						// console.log($parent);
 						// console.log($parent.hasClass('open'));
 
 						var $opened = $parent.hasClass('open');
@@ -244,7 +244,8 @@
 						if ($opened) {
 							// closed by line above
 						} else {
-							$parent.addClass('open');
+							console.log('opening');
+							setTimeout(() => $parent.addClass('open'), 100);
 						}
 					}
 
