@@ -237,10 +237,10 @@
 						e.preventDefault();
 
 						console.log($parent);
-						console.log($parent.hasClass('open'));
+						// console.log($parent.hasClass('open'));
 
 						var $opened = $parent.hasClass('open');
-						$('li.has_children').removeClass('open');
+						//	$('li.has_children').removeClass('open');
 						if ($opened) {
 							// closed by line above
 						} else {
