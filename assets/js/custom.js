@@ -236,6 +236,9 @@
 						console.log('lihaschildren a');
 						e.preventDefault();
 
+						console.log($parent);
+						console.log($parent.hasClass('open'));
+
 						var $opened = $parent.hasClass('open');
 						$('li.has_children').removeClass('open');
 						if ($opened) {
