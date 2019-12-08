@@ -232,20 +232,27 @@
 					$('.navbar-custom .navbar-nav  li, .navbar-custom li.dropdown  ul  li').removeClass('open');
 					var delay = 0;
 					var setTimeoutConst;
-					$('.navbar-custom .navbar-nav  li, .navbar-custom li  ul  li').click(  /// CHARLES CHANGED FROM HOVER
-						function () {
+					// $('.navbar-custom .navbar-nav  li, .navbar-custom li  ul  li').hover(  /// CHARLES CHANGED 
+					$('.navbar-custom .navbar-nav  li a, .navbar-custom li  ul  li a').click(  /// CHARLES CHANGED 
+						function (e) {
+							e.preventDefault();
 							var $this = $(this);
 							setTimeoutConst = setTimeout(
 								function () {
-									$this.addClass('open');
-									$this.find('.dropdown-toggle').addClass('disabled');
+									// $this.addClass('open');
+									$this.parent().addClass('open');
+									// $this.find('.dropdown-toggle').addClass('disabled');
+									$this.parent().find('.dropdown-toggle').addClass('disabled');
 								}, delay
 							);
 						},
-						function () {
+						function (e) {
+							e.preventDefault();
 							clearTimeout(setTimeoutConst);
-							$(this).removeClass('open');
-							$(this).find('.dropdown-toggle').removeClass('disabled');
+							// $(this).removeClass('open');
+							$(this).parent().removeClass('open');
+							// $(this).find('.dropdown-toggle').removeClass('disabled');
+							$(this).parent().find('.dropdown-toggle').removeClass('disabled');
 						}
 					);
 				} else {
