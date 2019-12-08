@@ -228,47 +228,61 @@
 			/* ---------------------------------------------- */
 
 			function hoverDropdown(width, mobileTest) {
-				if ((width > 768) && (mobileTest !== true)) {
-					$('.navbar-custom .navbar-nav  li, .navbar-custom li.dropdown  ul  li').removeClass('open');
-					var delay = 0;
-					var setTimeoutConst;
-					// $('.navbar-custom .navbar-nav  li, .navbar-custom li  ul  li').hover(
-					$('.navbar-custom .navbar-nav  li > a, .navbar-custom li  ul  li  > a').click(  /// CHARLES CHANGED 
-						function (e) {
-							e.preventDefault();
-							var $this = $(this);
-							var $parent = $this.parent();
-							setTimeoutConst = setTimeout(
-								function () {
-									// $this.addClass('open');
-									$parent.addClass('open');
-									// $this.find('.dropdown-toggle').addClass('disabled');
-									$parent.find('.dropdown-toggle').addClass('disabled');
-								}, delay
-							);
-						},
-						function (e) {
-							e.preventDefault();
-							clearTimeout(setTimeoutConst);
-							// $(this).removeClass('open');
-							$(this).parent().removeClass('open');
-							// $(this).find('.dropdown-toggle').removeClass('disabled');
-							$(this).parent().find('.dropdown-toggle').removeClass('disabled');
-						}
-					);
-				} else {
-					$('.navbar-custom .navbar-nav  li, .navbar-custom li  ul li').unbind('mouseenter mouseleave');
-					$('.navbar-custom [data-toggle=dropdown]').not('.binded').addClass('binded').on(
-						'click', function (event) {
-							event.preventDefault();
-							event.stopPropagation();
-							$(this).parent().siblings().removeClass('open');
-							$(this).parent().siblings().find('[data-toggle=dropdown]').parent().removeClass('open');
-							$(this).parent().toggleClass('open');
-						}
-					);
-				}
+				$('li.has_children > a').on('click', function (e) {
+					e.preventDefault();
+				});
+
+				$('.navbar-custom .navbar-nav  li.has_children').on('click', function (e) {
+					var $this = $(this);
+					var $opened = $this.hasClass('open');
+					$('li.has_children').removeClass('open');
+					if ($opened) {
+						// closed by line above
+					} else {
+						$this.addClass('open');
+					}
+
+				});
+
+
 			}
+
+			// function hoverDropdown(width, mobileTest) {
+			// 	if ((width > 768) && (mobileTest !== true)) {
+			// 		$('.navbar-custom .navbar-nav  li, .navbar-custom li.dropdown  ul  li').removeClass('open');
+			// 		var delay = 0;
+			// 		var setTimeoutConst;
+			// 		$('.navbar-custom .navbar-nav  li, .navbar-custom li  ul  li').hover(
+			// 			function () {
+			// 				var $this = $(this);
+			// 				setTimeoutConst = setTimeout(
+			// 					function () {
+			// 						$this.addClass('open');
+			// 						$this.find('.dropdown-toggle').addClass('disabled');
+			// 					}, delay
+			// 				);
+			// 			},
+			// 			function () {
+			// 				clearTimeout(setTimeoutConst);
+			// 				$(this).removeClass('open');
+			// 				$(this).find('.dropdown-toggle').removeClass('disabled');
+			// 			}
+			// 		);
+			// 	} else {
+			// 		$('.navbar-custom .navbar-nav  li, .navbar-custom li  ul li').unbind('mouseenter mouseleave');
+			// 		$('.navbar-custom [data-toggle=dropdown]').not('.binded').addClass('binded').on(
+			// 			'click', function (event) {
+			// 				event.preventDefault();
+			// 				event.stopPropagation();
+			// 				$(this).parent().siblings().removeClass('open');
+			// 				$(this).parent().siblings().find('[data-toggle=dropdown]').parent().removeClass('open');
+			// 				$(this).parent().toggleClass('open');
+			// 			}
+			// 		);
+			// 	}
+			// }
+
+
 
 			/* ---------------------------------------------- /*
 			* Navbar collapse on click
