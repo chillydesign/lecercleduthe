@@ -229,10 +229,14 @@
 
 			function hoverDropdown(width, mobileTest) {
 				console.log('hoverdropdown');
-				$('li.has_children > a').on('click', function (e) {
-					console.log('lihaschildren a');
-					console.log($(this));
-					e.preventDefault();
+				$('li.has_children  a').on('click', function (e) {
+					var $this = $(this);
+					if ($this.parent().hasClass('has_children')) {
+						console.log('lihaschildren a');
+
+						e.preventDefault();
+					}
+
 				});
 
 
@@ -564,11 +568,11 @@
 			// 	}
 			// );
 
-			$('html,body,.main,.navbar-custom,.bottom-page-wrap').click(
-				function () {
-					$menuWrap.find('.' + submenuOpenClass).removeClass(submenuOpenClass);
-				}
-			);
+			// $('html,body,.main,.navbar-custom,.bottom-page-wrap').click(
+			// 	function () {
+			// 		$menuWrap.find('.' + submenuOpenClass).removeClass(submenuOpenClass);
+			// 	}
+			// );
 
 			/* Visible arrow on mobile */
 			if (mobileTest === true && $('.flex-direction-nav').length > 0 && $('ul.slides > li').length > 1) {
