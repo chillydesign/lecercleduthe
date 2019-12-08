@@ -232,13 +232,9 @@
 				jQuery('.navbar-custom .navbar-nav li  a').on('click', function (e) {
 					var $this = jQuery(this);
 					var $parent = $this.parent();
-					var $grandparent = $parent.parent();
-					var $greatgrandparent = $grandparent.parent();
 					if ($parent.hasClass('has_children')) {
 
 						e.preventDefault();
-
-
 
 
 						var $opened = $parent.hasClass('open');
@@ -249,9 +245,7 @@
 
 							setTimeout(() => {
 								$parent.addClass('open');
-								if ($greatgrandparent.hasClass('open')) {
-									greatgrandparent.addClass('open');
-								}
+
 							}, 100);
 						}
 					}

@@ -3321,6 +3321,17 @@ Sections
 .navbar-custom div.nav>ul>li.has_children>.dropdownmenu:before {
     line-height: 16px;
     content: "\43";
+
+
+
+}
+
+.dropdownmenu::before {
+    right: 0;
+
+    position: absolute;
+
+    top: 30%;
 }
 
 .navbar-custom li.has_children.this-open>.dropdownmenu:before {
@@ -6624,6 +6635,8 @@ Vertival margin, padding
         height: 40px;
         margin: 0;
         cursor: pointer;
+
+        width: 100%;
     }
 
     .navbar-custom li.has_children>.dropdownmenu:before,
