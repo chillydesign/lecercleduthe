@@ -232,7 +232,7 @@
 					$('.navbar-custom .navbar-nav  li, .navbar-custom li.dropdown  ul  li').removeClass('open');
 					var delay = 0;
 					var setTimeoutConst;
-					$('.navbar-custom .navbar-nav  li, .navbar-custom li  ul  li').hover(
+					$('.navbar-custom .navbar-nav  li, .navbar-custom li  ul  li').click(  /// CHARLES CHANGED FROM HOVER
 						function () {
 							var $this = $(this);
 							setTimeoutConst = setTimeout(
